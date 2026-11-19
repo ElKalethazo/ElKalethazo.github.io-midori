@@ -3,13 +3,15 @@
     <nav class="nav">
         <ul class="menu">
             <li><a href="index.php">Nosotros</a></li>
-            <li class="dropdown">
+            
+            <li class="has-submenu">
                 <a href="#">Vivero</a>
                 <ul class="sub-menu">
                     <li><a href="sections/porColor.php">Por color</a></li>
-                    <li class="dropdown">
-                        <a href="#">Interiores</a>
-                        <ul class="sub-menu">
+                    
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-trigger">Interiores</a>
+                        <ul class="sub-menu sub-menu-derecha">
                             <li><a href="sections/Interiores/intDeSol.php">De Sol</a></li>
                             <li><a href="sections/Interiores/intDeSombra.php">De sombra</a></li>
                         </ul>
