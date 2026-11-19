@@ -43,7 +43,7 @@
                     todo tipo de ambientes. En Midori organizamos nuestras especies pensando en lo que
                     tu espacio realmente necesita —ya sean plantas de interior o exterior, de sol directo,
                     sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
-
+                <br>
                 <h2>Nuestras categorías...</h2>
 
                 <h4>Exteriores</h4>

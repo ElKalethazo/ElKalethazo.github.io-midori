@@ -23,7 +23,7 @@ body {
 .header {
     background-color: var(--background-body-content);
     padding: 18px 50px;
-    position: relative;
+    position: sticky;
     z-index: 100;
 }
 
