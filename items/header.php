@@ -17,6 +17,15 @@
                             <li><a href="sections/Interiores/intDeSombra.php">De sombra</a></li>
                         </ul>
                     </li>
+
+                    <li class="has-submenu">
+                        <a href="#" class="submenu-trigger">Exteriores</a>
+                        <ul class="sub-menu sub-menu-derecha">
+                            <li><a href="sections/Exteriores/extDeSol.php">De Sol</a></li>
+                            <li><a href="sections/Exteriores/extDeSombra.php">De sombra</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </li>
             <li><a href="ubicacion.php">Ubicación</a></li>

@@ -8,19 +8,20 @@
 
 :root{
     --background-body-content:#E4E3A3; 
+    --font-color:#2c3529;
 
 }
 body {
+    font-size: 1rem;
     background-color: var(--background-body-content); /* Amarillo pastel oliva del fondo */
-    color: #2c3529;
+    color: var(--font-color);
     font-family: 'Barlow Condensed', sans-serif;
 }
 
 /* ===== BARRA DE NAVEGACIÓN (header.php) ===== */
 .header {
-    background-color: #E4E3A3;
+    background-color: var(--background-body-content);
     padding: 18px 50px;
-    border-bottom: 1px solid rgba(54, 69, 50, 0.16);
     position: relative;
     z-index: 100;
 }
@@ -49,33 +50,13 @@ body {
     align-items: center;
     gap: 6px;
     text-decoration: none;
-    color: #2c3529; /* Verde bosque oscuro para buen contraste sobre #E4E3A3 */
+    color: var(--font-color);
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.45rem;
     font-weight: 600;
     letter-spacing: 0.6px;
     padding: 8px 16px;
-    border-radius: 10px;
-    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
-}
-
-.menu > li > a:hover,
-.menu > li > a:focus-visible {
-    background-color: #B7D3A8; /* Verde pastel del marco */
-    color: #1e291c;
-    outline: none;
-}
-
-/* Indicador sutil para ítems con submenú */
-.has-submenu > a::after {
-    content: "▾";
-    font-size: 0.95rem;
-    color: #364532;
-    transition: transform 0.25s ease;
-}
-
-.has-submenu:hover > a::after {
-    transform: rotate(180deg);
+    border-radius: 12px;
 }
 
 /* ===== SUBMENÚS DESPLEGABLES ===== */
