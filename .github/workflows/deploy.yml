@@ -1,0 +1,59 @@
+name: Compilar PHP y desplegar en GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilar archivos PHP a HTML estático
+        run: |
+          mkdir -p _site
+          rsync -av --exclude='.git' --exclude='.github' --exclude='_site' ./ _site/
+
+          cd _site
+          # Compila todos los .php a .html (ignorando los parciales dentro de items/)
+          find . -type f -name "*.php" ! -path "./items/*" | while read -r file; do
+            dir=$(dirname "$file")
+            base=$(basename "$file" .php)
+            echo "Compilando $file -> $dir/$base.html"
+            (cd "$dir" && php "$base.php" > "$base.html")
+          done
+
+          # Cambia los enlaces internos de .php a .html en los archivos generados
+          find . -type f -name "*.html" -exec sed -i -E 's/([a-zA-Z0-9_-]+)\.php/\1.html/g' {} +
+
+          # Elimina los .php originales y la carpeta items/ de la versión pública
+          find . -type f -name "*.php" -delete
+          rm -rf items
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
