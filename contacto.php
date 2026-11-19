@@ -12,7 +12,6 @@
 
     <body>
         <?php 
-            $ruta = "";
             include 'items/header.php'; 
         ?>
         <main>
