@@ -19,18 +19,6 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.contenido h2:not(:first-child) {
-    margin-top: 35px;
-}
-
-.contenido h4 {
-    font-family: 'Merienda', cursive;
-    font-size: 1.35rem;
-    color: #364532;
-    margin-top: 22px;
-    margin-bottom: 6px;
-}
-
 /*Barra de navegación*/
 .header {
     background-color: var(--background-body-content);
@@ -246,4 +234,17 @@ body {
 .contenido p {
     font-size: 1.2rem;
     line-height: 1.6;
+}
+
+
+.contenido h2:not(:first-child) {
+    margin-top: 35px;
+}
+
+.contenido h4 {
+    font-family: 'Merienda', cursive;
+    font-size: 1.35rem;
+    color: #364532;
+    margin-top: 22px;
+    margin-bottom: 6px;
 }
