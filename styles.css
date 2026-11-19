@@ -9,8 +9,8 @@
 :root{
     --background-body-content:#E4E3A3; 
     --font-color:#2c3529;
-    --font-color-nav: #F4F5DF;;
-
+    --font-color-nav: #F4F5DF;
+    --background-blur: #b9c3b659; 
 }
 body {
     font-size: 1rem;
@@ -126,7 +126,6 @@ body {
 .letrero-tienda {
     width: 100%;
     min-height: 450px;
-    /* Cambia 'img/fondo-hojas.jpg' por la ruta de tu imagen de hojas */
     background-image: linear-gradient(rgba(28, 42, 28, 0.55), rgba(28, 42, 28, 0.55)), url('images/fondo.jpg');
     background-size: cover;
     background-position: center;
@@ -139,7 +138,7 @@ body {
 .banner-translúcido {
     width: 84%;
     max-width: 1180px;
-    background-color: rgba(185, 195, 182, 0.35);
+    background-color: var(--background-blur);
     backdrop-filter: blur(3px);
     border-radius: 0 18px 18px 0; /* Recto a la izquierda, redondeado a la derecha */
     padding: 45px 0 45px 7%;
