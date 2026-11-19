@@ -9,6 +9,7 @@
 :root{
     --background-body-content:#E4E3A3; 
     --font-color:#2c3529;
+    --font-color-nav: #F4F5DF;;
 
 }
 body {
@@ -67,7 +68,6 @@ body {
     min-width: 210px;
     list-style: none;
     background-color: #364532; /* Verde musgo oscuro de los títulos */
-    border: 1px solid #B7D3A8;
     border-radius: 12px;
     padding: 8px;
     box-shadow: 0 10px 24px rgba(28, 42, 28, 0.22);
@@ -90,7 +90,7 @@ body {
 }
 
 .sub-menu a {
-    color: #F4F5DF; /* Crema claro suave para contraste sobre verde oscuro */
+    color: var(--font-color-nav); /* Crema claro suave para contraste sobre verde oscuro */
     font-size: 1.25rem;
     font-weight: 500;
     padding: 9px 14px;
