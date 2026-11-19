@@ -127,7 +127,7 @@ body {
     width: 100%;
     min-height: 450px;
     /* Cambia 'img/fondo-hojas.jpg' por la ruta de tu imagen de hojas */
-    background-image: linear-gradient(rgba(28, 42, 28, 0.55), rgba(28, 42, 28, 0.55)), url('img/fondo-hojas.jpg');
+    background-image: linear-gradient(rgba(28, 42, 28, 0.55), rgba(28, 42, 28, 0.55)), url('images/fondo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
