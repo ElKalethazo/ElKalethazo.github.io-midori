@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <?php include 'header.php'; ?>
+        <?php include 'items/header.php'; ?>
 
         <main>
             <!-- Letrero de la tienda -->
