@@ -23,6 +23,7 @@ body {
 .header {
     background-color: var(--background-body-content);
     padding: 18px 50px;
+    top: 0;
     position: sticky;
     z-index: 100;
 }
@@ -234,11 +235,6 @@ body {
 .contenido p {
     font-size: 1.2rem;
     line-height: 1.6;
-}
-
-
-.contenido h2:not(:first-child) {
-    margin-top: 35px;
 }
 
 .contenido h4 {

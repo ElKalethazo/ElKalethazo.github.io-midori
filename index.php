@@ -50,6 +50,7 @@
                 <p>Especies resistentes y llenas de vigor, ideales para dar vida a jardines, patios y balcones.
                     Ya sea que tu espacio reciba sol directo o disfrute de media sombra, aquí encontrarás plantas 
                     preparadas para crecer al aire libre.</p>
+                
 
                 <h4>Interiores</h4>
                 <p>Variedades seleccionadas para llenar de frescura y calma tu sala, habitación u oficina.
