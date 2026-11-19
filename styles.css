@@ -12,31 +12,128 @@ body {
 }
 
 /* ===== BARRA DE NAVEGACIÓN (header.php) ===== */
-header {
+.header {
     background-color: #E4E3A3;
-    padding: 22px 50px;
+    padding: 18px 50px;
+    border-bottom: 1px solid rgba(54, 69, 50, 0.16);
+    position: relative;
+    z-index: 100;
 }
 
-header nav,
-header ul {
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 35px;
+    justify-content: flex-start;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     list-style: none;
 }
 
-header a {
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #2c3529; /* Verde bosque oscuro para buen contraste sobre #E4E3A3 */
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.45rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: opacity 0.2s ease;
+    letter-spacing: 0.6px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 
-header a:hover {
-    opacity: 0.8;
+.menu > li > a:hover,
+.menu > li > a:focus-visible {
+    background-color: #B7D3A8; /* Verde pastel del marco */
+    color: #1e291c;
+    outline: none;
+}
+
+/* Indicador sutil para ítems con submenú */
+.has-submenu > a::after {
+    content: "▾";
+    font-size: 0.95rem;
+    color: #364532;
+    transition: transform 0.25s ease;
+}
+
+.has-submenu:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* ===== SUBMENÚS DESPLEGABLES ===== */
+.sub-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 210px;
+    list-style: none;
+    background-color: #364532; /* Verde musgo oscuro de los títulos */
+    border: 1px solid #B7D3A8;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 10px 24px rgba(28, 42, 28, 0.22);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    z-index: 200;
+}
+
+.has-submenu:hover > .sub-menu,
+.has-submenu:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sub-menu li {
+    position: relative;
+}
+
+.sub-menu a {
+    color: #F4F5DF; /* Crema claro suave para contraste sobre verde oscuro */
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 9px 14px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.sub-menu a:hover,
+.sub-menu a:focus-visible {
+    background-color: #B7D3A8;
+    color: #2c3529;
+}
+
+.sub-menu .has-submenu > a::after {
+    content: "▸";
+    color: #B7D3A8;
+    transform: none;
+}
+
+.sub-menu .has-submenu:hover > a::after {
+    color: #2c3529;
+    transform: translateX(2px);
+}
+
+/* Segundo nivel: se abre hacia la derecha */
+.sub-menu-derecha {
+    top: 0;
+    left: calc(100% + 8px);
+    min-width: 190px;
 }
 
 /* ===== SECCIÓN HERO / LETRERO DE LA TIENDA ===== */
@@ -159,6 +256,37 @@ header a:hover {
 
 /* ===== DISEÑO RESPONSIVO (CELULARES Y TABLETS) ===== */
 @media (max-width: 900px) {
+    .header {
+        padding: 14px 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .menu a {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+    }
+
+    .sub-menu,
+    .sub-menu-derecha {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: 4px;
+        margin-left: 12px;
+        display: none;
+    }
+
+    .has-submenu:hover > .sub-menu,
+    .has-submenu:focus-within > .sub-menu {
+        display: block;
+    }
+
     .banner-translúcido {
         width: 94%;
         flex-direction: column;
@@ -188,167 +316,5 @@ header a:hover {
         margin-right: 0;
         width: 220px;
         height: 220px;
-    }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    .header {
-        background-color: #1f4d2e;
-        color: #ffffff;
-        position: relative;
-        z-index: 1000;
-    }
-
-    .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 64px;
-    }
-
-    .logo {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.25rem;
-    }
-
-    .menu {
-        list-style: none;
-        display: flex;
-        gap: 8px;
-    }
-
-    .menu li {
-        position: relative;
-    }
-
-    .menu a {
-        display: block;
-        padding: 18px 16px;
-        color: #ffffff;
-        text-decoration: none;
-        transition: background-color 0.2s ease;
-    }
-
-    .menu a:hover {
-        background-color: #2d6a42;
-    }
-
-    /* Submenús (Nivel 1 y Nivel 2) */
-    .sub-menu {
-        list-style: none;
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 210px;
-        background-color: #265c38;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        border-radius: 0 0 6px 6px;
-    }
-
-    /* Segundo nivel: se abre a la derecha */
-    .sub-menu .sub-menu-right {
-        top: 0;
-        left: 100%;
-        border-radius: 6px;
-    }
-
-    .sub-menu a {
-        padding: 12px 16px;
-    }
-
-    /* Mostrar submenú en escritorio al pasar el ratón o enfocar */
-    @media (min-width: 769px) {
-        .has-submenu:hover > .sub-menu,
-        .has-submenu:focus-within > .sub-menu {
-            display: block;
-        }
-    }
-
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: #ffffff;
-        font-size: 1.6rem;
-        cursor: pointer;
-    }
-
-    /* Vista móvil */
-    @media (max-width: 768px) {
-        .menu-toggle {
-            display: block;
-        }
-
-        .nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: #1f4d2e;
-        }
-
-        .nav.active {
-            display: block;
-        }
-
-        .menu {
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .menu a {
-            padding: 14px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .sub-menu,
-        .sub-menu .sub-menu-right {
-            position: static;
-            box-shadow: none;
-            background-color: #2d6a42;
-            min-width: 100%;
-        }
-
-        .sub-menu a {
-            padding-left: 36px;
-        }
-
-        .sub-menu .sub-menu-right a {
-            padding-left: 52px;
-        }
-
-        .has-submenu.open > .sub-menu {
-            display: block;
-        }
     }
 }
