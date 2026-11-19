@@ -1,5 +1,6 @@
 <!-- header.php -->
 <header class="header">
+    <link rel="stylesheet" href="styles.css">
     <nav class="nav">
         <ul class="menu">
             <li><a href="index.php">Nosotros</a></li>

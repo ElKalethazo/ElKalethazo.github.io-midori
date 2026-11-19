@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --background-body-content:#E4E3A3; 
+
+}
 body {
-    background-color: #E4E3A3; /* Amarillo pastel oliva del fondo */
+    background-color: var(--background-body-content); /* Amarillo pastel oliva del fondo */
     color: #2c3529;
     font-family: 'Barlow Condensed', sans-serif;
 }
