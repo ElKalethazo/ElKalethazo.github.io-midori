@@ -39,7 +39,10 @@
             <!-- Sección inferior -->
             <section class="contenido" id="Contenido">
                 <h2>¿Quiénes somos?</h2>
-                <p>Somos una página dedicada a...</p>
+                <p>Somos una casa botánica dedicada al cultivo y selección de plantas saludables para 
+                    todo tipo de ambientes. En Midori organizamos nuestras especies pensando en lo que
+                     tu espacio realmente necesita —ya sean plantas de interior o exterior, de sol directo,
+                      sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
             </section>
         </main>
     </body>
