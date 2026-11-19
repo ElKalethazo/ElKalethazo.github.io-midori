@@ -1,0 +1,192 @@
+/* ===== RESET Y COLORES GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E4E3A3; /* Amarillo pastel oliva del fondo */
+    color: #2c3529;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ===== BARRA DE NAVEGACIÓN (header.php) ===== */
+header {
+    background-color: #E4E3A3;
+    padding: 22px 50px;
+}
+
+header nav,
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+header a:hover {
+    opacity: 0.8;
+}
+
+/* ===== SECCIÓN HERO / LETRERO DE LA TIENDA ===== */
+.letrero-tienda {
+    width: 100%;
+    min-height: 450px;
+    /* Cambia 'img/fondo-hojas.jpg' por la ruta de tu imagen de hojas */
+    background-image: linear-gradient(rgba(28, 42, 28, 0.55), rgba(28, 42, 28, 0.55)), url('img/fondo-hojas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 45px 0;
+}
+
+/* Caja gris-verdosa semitransparente pegada a la izquierda */
+.banner-translúcido {
+    width: 84%;
+    max-width: 1180px;
+    background-color: rgba(185, 195, 182, 0.35);
+    backdrop-filter: blur(3px);
+    border-radius: 0 18px 18px 0; /* Recto a la izquierda, redondeado a la derecha */
+    padding: 45px 0 45px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ===== TEXTOS DE LA MARCA ===== */
+.bloque-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.titulo-principal h1 {
+    font-family: 'Merienda', cursive;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.titulo-principal h3 {
+    font-family: 'Merienda', cursive;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.15;
+}
+
+.eslogan {
+    font-family: 'Hortensia', 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    color: #FFFFFF;
+    margin-top: 10px;
+    /* Centra el eslogan debajo de "Midori" */
+    width: 340px;
+    text-align: center;
+}
+
+/* ===== FOTO DERECHA CON MARCO VERDE DESPLAZADO ===== */
+.marco-foto {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    /* Hace que sobresalga ligeramente del borde derecho de la caja translúcida */
+    margin-right: -75px;
+}
+
+/* Cuadro verde claro detrás (arriba a la izquierda) */
+.marco-foto::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 100%;
+    height: 100%;
+    background-color: #B7D3A8;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.marco-foto img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    z-index: 2;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== SECCIÓN DE CONTENIDO INFERIOR ===== */
+.contenido {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 40px;
+}
+
+.contenido h2 {
+    font-family: 'Merienda', cursive;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #364532;
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* ===== DISEÑO RESPONSIVO (CELULARES Y TABLETS) ===== */
+@media (max-width: 900px) {
+    .banner-translúcido {
+        width: 94%;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+        gap: 45px;
+    }
+
+    .bloque-marca {
+        align-items: center;
+    }
+
+    .titulo-principal {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 3.8rem;
+    }
+
+    .eslogan {
+        width: auto;
+    }
+
+    .marco-foto {
+        margin-right: 0;
+        width: 220px;
+        height: 220px;
+    }
+}
