@@ -41,8 +41,25 @@
                 <h2>¿Quiénes somos?</h2>
                 <p>Somos una casa botánica dedicada al cultivo y selección de plantas saludables para 
                     todo tipo de ambientes. En Midori organizamos nuestras especies pensando en lo que
-                     tu espacio realmente necesita —ya sean plantas de interior o exterior, de sol directo,
-                      sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
+                    tu espacio realmente necesita —ya sean plantas de interior o exterior, de sol directo,
+                    sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
+
+                <h2>Nuestras categorías...</h2>
+
+                <h4>Exteriores</h4>
+                <p>Especies resistentes y llenas de vigor, ideales para dar vida a jardines, patios y balcones.
+                    Ya sea que tu espacio reciba sol directo o disfrute de media sombra, aquí encontrarás plantas 
+                    preparadas para crecer al aire libre.</p>
+
+                <h4>Interiores</h4>
+                <p>Variedades seleccionadas para llenar de frescura y calma tu sala, habitación u oficina.
+                    Contamos con opciones que se adaptan tanto a rincones muy iluminados cerca de una ventana como
+                    a espacios más sombreados dentro de casa.</p>
+
+                <h4>Por color</h4>
+                <p>Una guía pensada para armonizar con la estética de tu hogar. Explora nuestras plantas según las
+                    tonalidades de sus hojas y flores para encontrar ese toque visual único que combine con tu estilo.</p>
+
             </section>
         </main>
     </body>
