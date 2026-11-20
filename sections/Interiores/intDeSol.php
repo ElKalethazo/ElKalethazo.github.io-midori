@@ -22,19 +22,19 @@
 
                 <div class="tarjetero">
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Ficus Lyrata">
+                        <img src="../../images/ficus.jpg" alt="Ficus Lyrata">
                         <h4>Ficus Lyrata</h4>
                         <p>Necesita luz brillante indirecta o sol suave de la mañana. Riego moderado cuando seque la capa superior.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Sansevieria">
+                        <img src="../../images/sansevieria.jpg" alt="Sansevieria">
                         <h4>Sansevieria</h4>
                         <p>Muy resistente y tolerante al sol filtrado. Requiere poco riego y purifica el aire.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Ave del Paraíso">
+                        <img src="../../images/ave.jpg" alt="Ave del Paraíso">
                         <h4>Ave del Paraíso</h4>
                         <p>De hojas grandes y tropicales, prospera junto a ventanales bien iluminados.</p>
                     </div>

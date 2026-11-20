@@ -22,19 +22,19 @@
 
                 <div class="tarjetero">
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Bugambilia">
+                        <img src="../../images/bugambilia.jpg" alt="Bugambilia">
                         <h4>Bugambilia</h4>
                         <p>Enredadera de floración abundante que necesita varias horas de sol directo al día.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Lavanda">
+                        <img src="../../images/lavanda.jpg" alt="Lavanda">
                         <h4>Lavanda</h4>
                         <p>Aromática y muy resistente al calor, ideal para macetas soleadas con buen drenaje.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Romero">
+                        <img src="../../images/romero.jpg" alt="Romero">
                         <h4>Romero</h4>
                         <p>Arbusto aromático de pleno sol y bajo consumo de agua.</p>
                     </div>

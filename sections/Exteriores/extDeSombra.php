@@ -22,19 +22,19 @@
 
                 <div class="tarjetero">
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Hortensia">
+                        <img src="../../images/hortensia.jpg" alt="Hortensia">
                         <h4>Hortensia</h4>
                         <p>Arbusto de flores vistosas que prefiere lugares frescos, semisombra y riego constante.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Helecho Boston">
+                        <img src="../../images/helecho.jpg" alt="Helecho Boston">
                         <h4>Helecho Boston</h4>
                         <p>Follaje frondoso que luce mejor en exteriores protegidos del sol fuerte.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Begonia">
+                        <img src="../../images/begonia.jpg" alt="Begonia">
                         <h4>Begonia</h4>
                         <p>Aporta color continuo en terrazas sombreadas con tierra ligeramente húmeda.</p>
                     </div>

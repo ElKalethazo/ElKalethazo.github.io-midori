@@ -22,19 +22,19 @@
 
                 <div class="tarjetero">
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Cuna de Moisés">
+                        <img src="../../images/cuna.jpg" alt="Cuna de Moisés">
                         <h4>Cuna de Moisés</h4>
                         <p>Destaca por sus flores blancas y su tolerancia a espacios sombreados con humedad media.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Potus">
+                        <img src="../../images/potus.jpg" alt="Potus">
                         <h4>Potus</h4>
                         <p>Planta colgante de fácil cuidado que crece bien lejos de las ventanas.</p>
                     </div>
 
                     <div class="tarjeta-planta">
-                        <img src="../../images/fondo-flores.jpg" alt="Zamioculca">
+                        <img src="../../images/zamioculca.jpg" alt="Zamioculca">
                         <h4>Zamioculca</h4>
                         <p>De hojas verdes brillantes, soporta ambientes con poca luz y riegos espaciados.</p>
                     </div>
