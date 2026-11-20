@@ -13,14 +13,17 @@
                     <li class="has-submenu">
                         <a href="#" class="submenu-trigger">Interiores</a>
                         <ul class="sub-menu sub-menu-derecha">
+                            
                             <li><a href="<?= $basePath ?>sections/Interiores/intDeSol.php">De Sol</a></li>
                             <li><a href="<?= $basePath ?>sections/Interiores/intDeSombra.php">De sombra</a></li>
+
                         </ul>
                     </li>
 
                     <li class="has-submenu">
                         <a href="#" class="submenu-trigger">Exteriores</a>
                         <ul class="sub-menu sub-menu-derecha">
+
                             <li><a href="<?= $basePath ?>sections/Exteriores/extDeSol.php">De Sol</a></li>
                             <li><a href="<?= $basePath ?>sections/Exteriores/extDeSombra.php">De sombra</a></li>
                         </ul>

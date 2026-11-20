@@ -19,11 +19,16 @@
                 <h2>Contáctanos</h2>
                 <p>¿Tienes dudas sobre el cuidado de alguna planta o buscas una especie en particular? Escríbenos y con gusto te asesoramos.</p>
                 
-                <h4>Horario de atención</h4>
-                <p>Lunes a sábado de 9:00 a.m. a 6:00 p.m.</p>
+                <div class="contacto-tarjeta">
+                    <h4>Horario de atención</h4>
+                    <p>Lunes a sábado de 9:00 a.m. a 6:00 p.m.</p>
 
-                <h4>Medios de contacto</h4>
-                <p>Correo: contacto@midoricasabotanica.com<br>Teléfono / WhatsApp: +52 222 000 0000</p>
+                    <h4>Medios de contacto</h4>
+                    <p>Correo: contacto@midoricasabotanica.com</p>
+                    <br>
+                    <p>Teléfono / WhatsApp: +52 222 000 0000</p>
+                </div>
+
             </section>
         </main>
     </body>
