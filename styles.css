@@ -314,19 +314,3 @@ body {
 .contacto-bloque p {
     margin-bottom: 4px;
 }
-
-/* Enlaces interactivos de correo y teléfono */
-.contacto-link {
-    color: #364532;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid #B7D3A8;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    padding: 1px 4px;
-    border-radius: 4px;
-}
-
-.contacto-link:hover {
-    background-color: #B7D3A8;
-    color: #2c3529;
-}
