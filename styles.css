@@ -299,16 +299,6 @@ body {
     box-shadow: 0 6px 14px rgba(44, 53, 41, 0.16);
 }
 
-/* Insignia superior en verde musgo */
-.contacto-etiqueta {
-    background-color: #364532;
-    color: var(--font-color-nav);
-    font-size: 1.05rem;
-    letter-spacing: 0.8px;
-    padding: 4px 16px;
-    border-radius: 999px;
-}
-
 /* Bloques internos separados por línea sutil */
 .contacto-bloque {
     width: 100%;

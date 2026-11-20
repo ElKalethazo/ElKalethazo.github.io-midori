@@ -18,9 +18,7 @@
                 <p>¿Tienes dudas sobre el cuidado de alguna planta o buscas una especie en particular? Escríbenos y con gusto te asesoramos.</p>
                 
                 <div class="contacto-tarjeta">
-                    <img class="avatar" src="images/Logo-midori.jpg" alt="Midori Casa Botánica">
-                    
-                    <span class="contacto-etiqueta">Midori · Casa Botánica</span>
+                    <img class="avatar" src="images/Logo-midori.jpg">
 
                     <div class="contacto-bloque">
                         <h4>Horario de atención</h4>
