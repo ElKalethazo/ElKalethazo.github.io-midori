@@ -29,15 +29,11 @@
                         <h4>Medios de contacto</h4>
                         <p>
                             Correo: 
-                            <a class="contacto-link" href="mailto:contacto@midoricasabotanica.com">
-                                contacto@midoricasabotanica.com
-                            </a>
+                            <a>contacto@midoricasabotanica.com</a>
                         </p>
                         <p>
                             Teléfono / WhatsApp: 
-                            <a class="contacto-link" href="tel:+522220000000">
-                                +52 222 000 0000
-                            </a>
+                            <a>+52 222 000 0000</a>
                         </p>
                     </div>
                 </div>
