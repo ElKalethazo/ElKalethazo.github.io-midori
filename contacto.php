@@ -20,6 +20,9 @@
                 <p>¿Tienes dudas sobre el cuidado de alguna planta o buscas una especie en particular? Escríbenos y con gusto te asesoramos.</p>
                 
                 <div class="contacto-tarjeta">
+
+                
+                    <img class="img" src="">
                     <h4>Horario de atención</h4>
                     <p>Lunes a sábado de 9:00 a.m. a 6:00 p.m.</p>
 
