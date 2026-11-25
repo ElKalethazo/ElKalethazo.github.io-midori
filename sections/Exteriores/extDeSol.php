@@ -26,7 +26,7 @@
                 <p>Plantas resistentes preparadas para recibir sol directo en patios, balcones y jardines.</p>
                 
                     <?php
-                        $exteriorSol = new TarjeteroPlantas(__DIR__.'/../../data/ExterioresDeSol.JSON');
+                        $exteriorSol = new TarjeteroPlantas(__DIR__.'/../../data/ExterioresDeSol.JSON', $basePath);
                         $exteriorSol->renderizar();
                     ?>
             </section>
