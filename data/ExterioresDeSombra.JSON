@@ -8,7 +8,8 @@
       "Riego": "Frecuente para mantener el sustrato siempre húmedo.",
       "Sol": "Sombra luminosa o semisombra fresca sin sol directo."
     },
-    "costo": "$200 MXN"
+    "costo": "$200 MXN",
+    "color":"azul"
   },
   {
     "id": "helecho_espada",
@@ -19,7 +20,8 @@
       "Riego": "Constante, manteniendo humedad ambiental y en tierra.",
       "Sol": "Sombra total o parcial protegida de rayos directos."
     },
-    "costo": "$155 MXN"
+    "costo": "$155 MXN",
+    "color":"verde"
   },
   {
     "id": "begonia",
@@ -30,7 +32,8 @@
       "Riego": "Moderado al secar la capa superficial, sin mojar follaje.",
       "Sol": "Sombra con buena claridad indirecta."
     },
-    "costo": "$50 MXN"
+    "costo": "$50 MXN",
+    "color":"rosa"
   },
   {
     "id": "hosta",
@@ -41,7 +44,8 @@
       "Riego": "Regular para conservar el suelo fresco y húmedo.",
       "Sol": "Semisombra a sombra profunda."
     },
-    "costo": "$160 MXN"
+    "costo": "$160 MXN",
+    "color":"verde"
   },
   {
     "id": "azalea",
@@ -52,7 +56,8 @@
       "Riego": "Regular con buen drenaje y sustrato ácido.",
       "Sol": "Sombra parcial o luz filtrada."
     },
-    "costo": "$180 MXN"
+    "costo": "$180 MXN",
+    "color":"rojo"
   },
   {
     "id": "astilbe",
@@ -63,6 +68,7 @@
       "Riego": "Abundante, sin dejar que la tierra se seque por completo.",
       "Sol": "Sombra o semisombra húmeda."
     },
-    "costo": "$180 MXN"
+    "costo": "$180 MXN",
+    "color":"rojo"
   }
 ]

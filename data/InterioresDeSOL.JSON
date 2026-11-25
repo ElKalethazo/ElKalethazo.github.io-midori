@@ -8,7 +8,8 @@
       "Riego": "Escaso, cada 2 a 3 semanas cuando la tierra esté seca.",
       "Sol": "Varias horas de sol directo junto a una ventana."
     },
-    "costo": "$125 MXN"
+    "costo": "$125 MXN",
+    "color":"verde"
   },
   {
     "id": "pata_de_elefante",
@@ -19,7 +20,8 @@
       "Riego": "Muy espaciado, aproximadamente cada 2 semanas.",
       "Sol": "Luz solar directa abundante en interiores luminosos."
     },
-    "costo": "$315 MXN"
+    "costo": "$315 MXN",
+    "color":"verde"
   },
   {
     "id": "croton",
@@ -30,7 +32,8 @@
       "Riego": "Moderado sin encharcar, manteniendo buena humedad ambiental.",
       "Sol": "Sol directo filtrado por ventana para conservar colores."
     },
-    "costo": "$200 MXN"
+    "costo": "$200 MXN",
+    "color":"naranja"
   },
   {
     "id": "ave_del_paraiso",
@@ -41,7 +44,8 @@
       "Riego": "Moderado al secarse los primeros centímetros de sustrato.",
       "Sol": "Sol directo diario junto a ventanales amplios."
     },
-    "costo": "$450 MXN"
+    "costo": "$450 MXN",
+    "color":"azul"
   },
   {
     "id": "yuca_de_interior",
@@ -52,7 +56,8 @@
       "Riego": "Escaso, únicamente cuando el sustrato esté totalmente seco.",
       "Sol": "Exposición solar directa junto a ventana."
     },
-    "costo": "$385 MXN"
+    "costo": "$385 MXN",
+    "color":"verde"
   },
   {
     "id": "echeveria",
@@ -63,6 +68,7 @@
       "Riego": "Espaciado directo a la tierra sin mojar la roseta.",
       "Sol": "Mínimo 4 horas de sol directo al día."
     },
-    "costo": "$45 MXN"
+    "costo": "$45 MXN",
+    "color":"verde"
   }
 ]

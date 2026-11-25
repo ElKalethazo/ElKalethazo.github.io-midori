@@ -8,7 +8,8 @@
       "Riego": "Moderado, cuando las hojas empiecen a decaer ligeramente.",
       "Sol": "Sombra luminosa o luz indirecta suave."
     },
-    "costo": "$185 MXN"
+    "costo": "$185 MXN",
+    "color":"blanco"
   },
   {
     "id": "lengua_de_suegra",
@@ -19,7 +20,8 @@
       "Riego": "Muy bajo, cada 2 a 3 semanas con sustrato seco.",
       "Sol": "Tolera sombra media o baja sin luz directa."
     },
-    "costo": "$195 MXN"
+    "costo": "$195 MXN",
+    "color":"verde"
   },
   {
     "id": "potus",
@@ -30,7 +32,8 @@
       "Riego": "Moderado al secar la capa superior de tierra.",
       "Sol": "Luz indirecta baja a media."
     },
-    "costo": "$130 MXN"
+    "costo": "$130 MXN",
+    "color":"verde"
   },
   {
     "id": "zamioculca",
@@ -41,7 +44,8 @@
       "Riego": "Muy espaciado, una vez cada 3 a 4 semanas.",
       "Sol": "Espacios con iluminación escasa o sombra interior."
     },
-    "costo": "$290 MXN"
+    "costo": "$290 MXN",
+    "color":"verde"
   },
   {
     "id": "aglaonema",
@@ -52,7 +56,8 @@
       "Riego": "Moderado en cuanto la superficie del sustrato se seque.",
       "Sol": "Sombra media con claridad indirecta."
     },
-    "costo": "$235 MXN"
+    "costo": "$235 MXN",
+    "color":"verde"
   },
   {
     "id": "calatea",
@@ -63,6 +68,7 @@
       "Riego": "Frecuente para mantener tierra húmeda sin encharcar.",
       "Sol": "Sombra luminosa o luz indirecta baja."
     },
-    "costo": "$280 MXN"
+    "costo": "$280 MXN",
+    "color":"verde"
   }
 ]

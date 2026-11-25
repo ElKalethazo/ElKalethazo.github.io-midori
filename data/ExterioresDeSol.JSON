@@ -8,7 +8,8 @@
       "Riego": "Moderado, dejando secar por completo el sustrato.",
       "Sol": "Mínimo 6 horas de luz solar directa al día."
     },
-    "costo": "$65 MXN"
+    "costo": "$65 MXN",
+    "color": "morado"
   },
   {
     "id": "geranio",
@@ -19,7 +20,8 @@
       "Riego": "Frecuente en temporada de calor sin encharcar.",
       "Sol": "Pleno sol directo para mantener floración constante."
     },
-    "costo": "$55 MXN"
+    "costo": "$55 MXN",
+    "color": "naranja"
   },
   {
     "id": "buganvilia",
@@ -30,7 +32,8 @@
       "Riego": "Escaso una vez establecida, muy tolerante a la sequía.",
       "Sol": "Sol directo intenso durante todo el día."
     },
-    "costo": "$130 MXN"
+    "costo": "$130 MXN",
+    "color": "rosa"
   },
   {
     "id": "gazania",
