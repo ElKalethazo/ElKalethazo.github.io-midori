@@ -1,5 +1,5 @@
 <!-- Llama la clase TarjeteroPlantas -->
-<?php require_once 'TarjeteroPlantas';?>
+<?php require_once 'TarjeteroPlantas.php';?>
 
 <!DOCTYPE html>
 <html lang="es">

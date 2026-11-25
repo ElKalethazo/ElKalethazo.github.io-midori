@@ -18,7 +18,7 @@
                 <p>¿Tienes dudas sobre el cuidado de alguna planta o buscas una especie en particular? Escríbenos y con gusto te asesoramos.</p>
                 
                 <div class="contacto-tarjeta">
-                    <img class="avatar" src="images/Logo-midori.png">
+                    <img class="avatar" src="images/principal/Logo-midori.png">
 
                     <div class="contacto-bloque">
                         <h4>Horario de atención</h4>

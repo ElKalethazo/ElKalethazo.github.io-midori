@@ -30,7 +30,7 @@
 
                     <!-- Foto con marco verde desplazado a la derecha -->
                     <div class="marco-foto">
-                        <img src="images/fondo-flores.jpg" alt="Flores Midori">
+                        <img src="images/principal/fondo-flores.jpg" alt="Flores Midori">
                     </div>
 
                 </div>
