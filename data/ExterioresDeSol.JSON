@@ -1,7 +1,7 @@
 [
   {
     "id": "lavanda",
-    "imagen": "/.../.../images/plantas/Exteriores/DeSol/lavanda.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/lavanda.jpg",
     "nombre": "Lavanda",
     "nombre_cientifico": "Lavandula angustifolia",
     "cuidados": {
@@ -15,7 +15,7 @@
   },
   {
     "id": "geranio",
-    "imagen": "/images/plantas/Exteriores/DeSol/geranio.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/geranio.jpg",
     "nombre": "Geranio",
     "nombre_cientifico": "Pelargonium spp.",
     "cuidados": {
@@ -31,7 +31,7 @@
   },
   {
     "id": "buganvilia",
-    "imagen": "/images/plantas/Exteriores/DeSol/buganvilia.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/buganvilia.jpg",
     "nombre": "Buganvilia",
     "nombre_cientifico": "Bougainvillea glabra",
     "cuidados": {
@@ -48,7 +48,7 @@
   },
   {
     "id": "gazania",
-    "imagen": "/images/plantas/Exteriores/DeSol/gazania.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/gazania.jpg",
     "nombre": "Gazania",
     "nombre_cientifico": "Gazania rigens",
     "cuidados": {
@@ -63,7 +63,7 @@
   },
   {
     "id": "lantana",
-    "imagen": "/images/plantas/Exteriores/DeSol/lantana.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/lantana.jpg",
     "nombre": "Lantana",
     "nombre_cientifico": "Lantana camara",
     "cuidados": {
@@ -79,7 +79,7 @@
   },
   {
     "id": "rosal",
-    "imagen": "/images/plantas/Exteriores/DeSol/rosal.jpg",
+    "imagen": "images/plantas/Exteriores/DeSol/rosal.jpg",
     "nombre": "Rosal",
     "nombre_cientifico": "Rosa spp.",
     "cuidados": {

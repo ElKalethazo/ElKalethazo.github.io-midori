@@ -1,7 +1,7 @@
 [
   {
     "id": "hortensia",
-    "imagen": "/images/plantas/Exteriores/DeSombra/hortensia.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/hortensia.jpg",
     "nombre": "Hortensia",
     "nombre_cientifico": "Hydrangea macrophylla",
     "cuidados": {
@@ -15,7 +15,7 @@
   },
   {
     "id": "helecho_espada",
-    "imagen": "/images/plantas/Exteriores/DeSombra/helecho_espada.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/helecho_espada.jpg",
     "nombre": "Helecho espada",
     "nombre_cientifico": "Nephrolepis exaltata",
     "cuidados": {
@@ -29,7 +29,7 @@
   },
   {
     "id": "begonia",
-    "imagen": "/images/plantas/Exteriores/DeSombra/begonia.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/begonia.jpg",
     "nombre": "Begonia",
     "nombre_cientifico": "Begonia semperflorens",
     "cuidados": {
@@ -43,7 +43,7 @@
   },
   {
     "id": "hosta",
-    "imagen": "/images/plantas/Exteriores/DeSombra/hosta.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/hosta.jpg",
     "nombre": "Hosta",
     "nombre_cientifico": "Hosta spp.",
     "cuidados": {
@@ -57,7 +57,7 @@
   },
   {
     "id": "azalea",
-    "imagen": "/images/plantas/Exteriores/DeSombra/azalea.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/azalea.jpg",
     "nombre": "Azalea",
     "nombre_cientifico": "Rhododendron simsii",
     "cuidados": {
@@ -71,7 +71,7 @@
   },
   {
     "id": "astilbe",
-    "imagen": "/images/plantas/Exteriores/DeSombra/astilbe.jpg",
+    "imagen": "images/plantas/Exteriores/DeSombra/astilbe.jpg",
     "nombre": "Astilbe",
     "nombre_cientifico": "Astilbe x arendsii",
     "cuidados": {
