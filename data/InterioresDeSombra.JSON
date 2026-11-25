@@ -1,7 +1,7 @@
 [
   {
     "id": "cuna_de_moises",
-    "imagen": "images/plantas/Interiores/DeSombra/cuna_de_moises.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/cuna_de_moises.jpg",
     "nombre": "Cuna de Moisés",
     "nombre_cientifico": "Spathiphyllum wallisii",
     "cuidados": {
@@ -15,7 +15,7 @@
   },
   {
     "id": "lengua_de_suegra",
-    "imagen": "images/plantas/Interiores/DeSombra/lengua_de_suegra.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/lengua_de_suegra.jpg",
     "nombre": "Lengua de suegra",
     "nombre_cientifico": "Dracaena trifasciata",
     "cuidados": {
@@ -29,7 +29,7 @@
   },
   {
     "id": "potus",
-    "imagen": "images/plantas/Interiores/DeSombra/potus.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/potus.jpg",
     "nombre": "Potus o Teléfono",
     "nombre_cientifico": "Epipremnum aureum",
     "cuidados": {
@@ -43,7 +43,7 @@
   },
   {
     "id": "zamioculca",
-    "imagen": "images/plantas/Interiores/DeSombra/zamioculca.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/zamioculca.jpg",
     "nombre": "Zamioculca",
     "nombre_cientifico": "Zamioculcas zamiifolia",
     "cuidados": {
@@ -57,7 +57,7 @@
   },
   {
     "id": "aglaonema",
-    "imagen": "images/plantas/Interiores/DeSombra/aglaonema.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/aglaonema.jpg",
     "nombre": "Aglaonema",
     "nombre_cientifico": "Aglaonema commutatum",
     "cuidados": {
@@ -71,7 +71,7 @@
   },
   {
     "id": "calatea",
-    "imagen": "images/plantas/Interiores/DeSombra/calatea.jpg",
+    "imagen": "/images/plantas/Interiores/DeSombra/calatea.jpg",
     "nombre": "Calatea",
     "nombre_cientifico": "Goeppertia makoyana",
     "cuidados": {
