@@ -1,7 +1,7 @@
 [
   {
     "id": "lavanda",
-    "imagen": "images/plantas/Exteriores/DeSol/lavanda.jpg",
+    "imagen": "/.../.../images/plantas/Exteriores/DeSol/lavanda.jpg",
     "nombre": "Lavanda",
     "nombre_cientifico": "Lavandula angustifolia",
     "cuidados": {
