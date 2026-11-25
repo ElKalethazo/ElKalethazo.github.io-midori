@@ -1,9 +1,11 @@
 <?php
 class TarjeteroPlantas {
     private $plantas = [];
+    private $basePath;
     
     //El constructor recibe la ruta del archivo de tipo JSON y carga los datos
-    public function __construct($rutaJson){
+    public function __construct($rutaJson, $basePath = ''){
+        $this->basePath = $basePath;
         //Comprueba la existencia del archivo en la ruta dada.
         //De no ser así, manda una excepción
         if(file_exists($rutaJson)){
@@ -79,15 +81,13 @@ class TarjeteroPlantas {
         HTML;
 
     }
-            
-
     
     //Construcción del HTML individual de cada tarjetero de cada
     //planta
     private function crearTarjeta($planta) {
         $nombre = htmlspecialchars($planta['nombre']);
         $cientifico = htmlspecialchars($planta['nombre_cientifico']);
-        $imagen = htmlspecialchars($planta['imagen']);
+        $imagen = htmlspecialchars($this->basePath . $planta['imagen']);
         $costo = htmlspecialchars($planta['costo']);
         $riego = htmlspecialchars($planta['cuidados']['Riego']);
         $sol = htmlspecialchars($planta['cuidados']['Sol']);

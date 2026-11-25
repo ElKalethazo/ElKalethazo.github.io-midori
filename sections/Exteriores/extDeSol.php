@@ -1,5 +1,8 @@
 <!-- Llama la clase TarjeteroPlantas -->
-<?php require_once 'TarjeteroPlantas.php';?>
+<?php
+    $basePath='../../';
+    require_once __DIR__.'TarjeteroPlantas.php';
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +18,7 @@
 
     <body>
         <?php 
-            include 'items/header.php'; 
+            include __DIR__.'/../../items/header.php'; 
         ?>
         <main>
             <section class="contenido">
@@ -23,7 +26,7 @@
                 <p>Plantas resistentes preparadas para recibir sol directo en patios, balcones y jardines.</p>
                 
                     <?php
-                        $exteriorSol = new TarjeteroPlantas('data/ExterioresDeSol.JSON');
+                        $exteriorSol = new TarjeteroPlantas(__DIR__.'/../../data/ExterioresDeSol.JSON');
                         $exteriorSol->renderizar();
                     ?>
             </section>
