@@ -15,8 +15,7 @@
 
     <body>
         <?php 
-            $basePath = '../../';
-            include '../../items/header.php'; 
+            include 'items/header.php'; 
         ?>
         <main>
             <section class="contenido">
