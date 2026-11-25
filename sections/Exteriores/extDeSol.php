@@ -1,3 +1,6 @@
+<!-- Llama la clase TarjeteroPlantas -->
+<?php require_once 'TarjeteroPlantas';?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -19,26 +22,11 @@
             <section class="contenido">
                 <h2>Exteriores de Sol</h2>
                 <p>Plantas resistentes preparadas para recibir sol directo en patios, balcones y jardines.</p>
-
-                <div class="tarjetero">
-                    <div class="tarjeta-planta">
-                        <img src="../../images/bugambilia.jpg" alt="Bugambilia">
-                        <h4>Bugambilia</h4>
-                        <p>Enredadera de floración abundante que necesita varias horas de sol directo al día.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/lavanda.jpg" alt="Lavanda">
-                        <h4>Lavanda</h4>
-                        <p>Aromática y muy resistente al calor, ideal para macetas soleadas con buen drenaje.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/romero.jpg" alt="Romero">
-                        <h4>Romero</h4>
-                        <p>Arbusto aromático de pleno sol y bajo consumo de agua.</p>
-                    </div>
-                </div>
+                
+                    <?php
+                        $exteriorSol = new TarjeteroPlantas('data/ExterioresDeSol.JSON');
+                        $exteriorSol->renderizar();
+                    ?>
             </section>
         </main>
     </body>
