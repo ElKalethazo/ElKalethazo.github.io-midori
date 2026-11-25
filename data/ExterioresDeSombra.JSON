@@ -1,0 +1,68 @@
+[
+  {
+    "id": "hortensia",
+    "imagen": "images/plantas/Exteriores/DeSombra/hortensia.jpg",
+    "nombre": "Hortensia",
+    "nombre_cientifico": "Hydrangea macrophylla",
+    "cuidados": {
+      "Riego": "Frecuente para mantener el sustrato siempre húmedo.",
+      "Sol": "Sombra luminosa o semisombra fresca sin sol directo."
+    },
+    "costo": "$200 MXN"
+  },
+  {
+    "id": "helecho_espada",
+    "imagen": "images/plantas/Exteriores/DeSombra/helecho_espada.jpg",
+    "nombre": "Helecho espada",
+    "nombre_cientifico": "Nephrolepis exaltata",
+    "cuidados": {
+      "Riego": "Constante, manteniendo humedad ambiental y en tierra.",
+      "Sol": "Sombra total o parcial protegida de rayos directos."
+    },
+    "costo": "$155 MXN"
+  },
+  {
+    "id": "begonia",
+    "imagen": "images/plantas/Exteriores/DeSombra/begonia.jpg",
+    "nombre": "Begonia",
+    "nombre_cientifico": "Begonia semperflorens",
+    "cuidados": {
+      "Riego": "Moderado al secar la capa superficial, sin mojar follaje.",
+      "Sol": "Sombra con buena claridad indirecta."
+    },
+    "costo": "$50 MXN"
+  },
+  {
+    "id": "hosta",
+    "imagen": "images/plantas/Exteriores/DeSombra/hosta.jpg",
+    "nombre": "Hosta",
+    "nombre_cientifico": "Hosta spp.",
+    "cuidados": {
+      "Riego": "Regular para conservar el suelo fresco y húmedo.",
+      "Sol": "Semisombra a sombra profunda."
+    },
+    "costo": "$160 MXN"
+  },
+  {
+    "id": "azalea",
+    "imagen": "images/plantas/Exteriores/DeSombra/azalea.jpg",
+    "nombre": "Azalea",
+    "nombre_cientifico": "Rhododendron simsii",
+    "cuidados": {
+      "Riego": "Regular con buen drenaje y sustrato ácido.",
+      "Sol": "Sombra parcial o luz filtrada."
+    },
+    "costo": "$180 MXN"
+  },
+  {
+    "id": "astilbe",
+    "imagen": "images/plantas/Exteriores/DeSombra/astilbe.jpg",
+    "nombre": "Astilbe",
+    "nombre_cientifico": "Astilbe x arendsii",
+    "cuidados": {
+      "Riego": "Abundante, sin dejar que la tierra se seque por completo.",
+      "Sol": "Sombra o semisombra húmeda."
+    },
+    "costo": "$180 MXN"
+  }
+]

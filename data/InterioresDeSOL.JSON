@@ -1,0 +1,68 @@
+[
+  {
+    "id": "aloe_vera",
+    "imagen": "images/plantas/Interiores/DeSol/aloe_vera.jpg",
+    "nombre": "Aloe vera o Sábila",
+    "nombre_cientifico": "Aloe barbadensis miller",
+    "cuidados": {
+      "Riego": "Escaso, cada 2 a 3 semanas cuando la tierra esté seca.",
+      "Sol": "Varias horas de sol directo junto a una ventana."
+    },
+    "costo": "$125 MXN"
+  },
+  {
+    "id": "pata_de_elefante",
+    "imagen": "images/plantas/Interiores/DeSol/pata_de_elefante.jpg",
+    "nombre": "Pata de elefante",
+    "nombre_cientifico": "Beaucarnea recurvata",
+    "cuidados": {
+      "Riego": "Muy espaciado, aproximadamente cada 2 semanas.",
+      "Sol": "Luz solar directa abundante en interiores luminosos."
+    },
+    "costo": "$315 MXN"
+  },
+  {
+    "id": "croton",
+    "imagen": "images/plantas/Interiores/DeSol/croton.jpg",
+    "nombre": "Cróton",
+    "nombre_cientifico": "Codiaeum variegatum",
+    "cuidados": {
+      "Riego": "Moderado sin encharcar, manteniendo buena humedad ambiental.",
+      "Sol": "Sol directo filtrado por ventana para conservar colores."
+    },
+    "costo": "$200 MXN"
+  },
+  {
+    "id": "ave_del_paraiso",
+    "imagen": "images/plantas/Interiores/DeSol/ave_del_paraiso.jpg",
+    "nombre": "Ave del paraíso",
+    "nombre_cientifico": "Strelitzia reginae",
+    "cuidados": {
+      "Riego": "Moderado al secarse los primeros centímetros de sustrato.",
+      "Sol": "Sol directo diario junto a ventanales amplios."
+    },
+    "costo": "$450 MXN"
+  },
+  {
+    "id": "yuca_de_interior",
+    "imagen": "images/plantas/Interiores/DeSol/yuca_de_interior.jpg",
+    "nombre": "Yuca de interior",
+    "nombre_cientifico": "Yucca elephantipes",
+    "cuidados": {
+      "Riego": "Escaso, únicamente cuando el sustrato esté totalmente seco.",
+      "Sol": "Exposición solar directa junto a ventana."
+    },
+    "costo": "$385 MXN"
+  },
+  {
+    "id": "echeveria",
+    "imagen": "images/plantas/Interiores/DeSol/echeveria.jpg",
+    "nombre": "Echeveria o Suculenta de roseta",
+    "nombre_cientifico": "Echeveria elegans",
+    "cuidados": {
+      "Riego": "Espaciado directo a la tierra sin mojar la roseta.",
+      "Sol": "Mínimo 4 horas de sol directo al día."
+    },
+    "costo": "$45 MXN"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "lavanda",
+    "imagen": "images/plantas/Exteriores/DeSol/lavanda.jpg",
+    "nombre": "Lavanda",
+    "nombre_cientifico": "Lavandula angustifolia",
+    "cuidados": {
+      "Riego": "Moderado, dejando secar por completo el sustrato.",
+      "Sol": "Mínimo 6 horas de luz solar directa al día."
+    },
+    "costo": "$65 MXN"
+  },
+  {
+    "id": "geranio",
+    "imagen": "images/plantas/Exteriores/DeSol/geranio.jpg",
+    "nombre": "Geranio",
+    "nombre_cientifico": "Pelargonium spp.",
+    "cuidados": {
+      "Riego": "Frecuente en temporada de calor sin encharcar.",
+      "Sol": "Pleno sol directo para mantener floración constante."
+    },
+    "costo": "$55 MXN"
+  },
+  {
+    "id": "buganvilia",
+    "imagen": "images/plantas/Exteriores/DeSol/buganvilia.jpg",
+    "nombre": "Buganvilia",
+    "nombre_cientifico": "Bougainvillea glabra",
+    "cuidados": {
+      "Riego": "Escaso una vez establecida, muy tolerante a la sequía.",
+      "Sol": "Sol directo intenso durante todo el día."
+    },
+    "costo": "$130 MXN"
+  },
+  {
+    "id": "gazania",
+    "imagen": "images/plantas/Exteriores/DeSol/gazania.jpg",
+    "nombre": "Gazania",
+    "nombre_cientifico": "Gazania rigens",
+    "cuidados": {
+      "Riego": "Bajo, 1 a 2 veces por semana en suelo bien drenado.",
+      "Sol": "Luz solar directa intensa para que abran sus flores."
+    },
+    "costo": "$40 MXN"
+  },
+  {
+    "id": "lantana",
+    "imagen": "images/plantas/Exteriores/DeSol/lantana.jpg",
+    "nombre": "Lantana",
+    "nombre_cientifico": "Lantana camara",
+    "cuidados": {
+      "Riego": "Espaciado, solo cuando el sustrato esté seco.",
+      "Sol": "Exposición solar directa continua."
+    },
+    "costo": "$55 MXN"
+  },
+  {
+    "id": "rosal",
+    "imagen": "images/plantas/Exteriores/DeSol/rosal.jpg",
+    "nombre": "Rosal",
+    "nombre_cientifico": "Rosa spp.",
+    "cuidados": {
+      "Riego": "Profundo 2 a 3 veces por semana sin mojar las hojas.",
+      "Sol": "De 5 a 6 horas de sol directo diario."
+    },
+    "costo": "$125 MXN"
+  }
+]

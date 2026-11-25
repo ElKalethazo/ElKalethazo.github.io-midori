@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cuna_de_moises",
+    "imagen": "images/plantas/Interiores/DeSombra/cuna_de_moises.jpg",
+    "nombre": "Cuna de Moisés",
+    "nombre_cientifico": "Spathiphyllum wallisii",
+    "cuidados": {
+      "Riego": "Moderado, cuando las hojas empiecen a decaer ligeramente.",
+      "Sol": "Sombra luminosa o luz indirecta suave."
+    },
+    "costo": "$185 MXN"
+  },
+  {
+    "id": "lengua_de_suegra",
+    "imagen": "images/plantas/Interiores/DeSombra/lengua_de_suegra.jpg",
+    "nombre": "Lengua de suegra",
+    "nombre_cientifico": "Dracaena trifasciata",
+    "cuidados": {
+      "Riego": "Muy bajo, cada 2 a 3 semanas con sustrato seco.",
+      "Sol": "Tolera sombra media o baja sin luz directa."
+    },
+    "costo": "$195 MXN"
+  },
+  {
+    "id": "potus",
+    "imagen": "images/plantas/Interiores/DeSombra/potus.jpg",
+    "nombre": "Potus o Teléfono",
+    "nombre_cientifico": "Epipremnum aureum",
+    "cuidados": {
+      "Riego": "Moderado al secar la capa superior de tierra.",
+      "Sol": "Luz indirecta baja a media."
+    },
+    "costo": "$130 MXN"
+  },
+  {
+    "id": "zamioculca",
+    "imagen": "images/plantas/Interiores/DeSombra/zamioculca.jpg",
+    "nombre": "Zamioculca",
+    "nombre_cientifico": "Zamioculcas zamiifolia",
+    "cuidados": {
+      "Riego": "Muy espaciado, una vez cada 3 a 4 semanas.",
+      "Sol": "Espacios con iluminación escasa o sombra interior."
+    },
+    "costo": "$290 MXN"
+  },
+  {
+    "id": "aglaonema",
+    "imagen": "images/plantas/Interiores/DeSombra/aglaonema.jpg",
+    "nombre": "Aglaonema",
+    "nombre_cientifico": "Aglaonema commutatum",
+    "cuidados": {
+      "Riego": "Moderado en cuanto la superficie del sustrato se seque.",
+      "Sol": "Sombra media con claridad indirecta."
+    },
+    "costo": "$235 MXN"
+  },
+  {
+    "id": "calatea",
+    "imagen": "images/plantas/Interiores/DeSombra/calatea.jpg",
+    "nombre": "Calatea",
+    "nombre_cientifico": "Goeppertia makoyana",
+    "cuidados": {
+      "Riego": "Frecuente para mantener tierra húmeda sin encharcar.",
+      "Sol": "Sombra luminosa o luz indirecta baja."
+    },
+    "costo": "$280 MXN"
+  }
+]
