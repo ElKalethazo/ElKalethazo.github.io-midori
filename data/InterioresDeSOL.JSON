@@ -9,7 +9,9 @@
       "Sol": "Varias horas de sol directo junto a una ventana."
     },
     "costo": "$125 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "pata_de_elefante",
@@ -21,7 +23,9 @@
       "Sol": "Luz solar directa abundante en interiores luminosos."
     },
     "costo": "$315 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "croton",
@@ -33,7 +37,9 @@
       "Sol": "Sol directo filtrado por ventana para conservar colores."
     },
     "costo": "$200 MXN",
-    "color":"naranja"
+    "colores": [
+      { "nombre": "naranja", "hex": "#FB8C00" }
+    ]
   },
   {
     "id": "ave_del_paraiso",
@@ -45,7 +51,9 @@
       "Sol": "Sol directo diario junto a ventanales amplios."
     },
     "costo": "$450 MXN",
-    "color":"azul"
+    "colores": [
+      { "nombre": "azul", "hex": "#1E88E5" }
+    ]
   },
   {
     "id": "yuca_de_interior",
@@ -57,7 +65,9 @@
       "Sol": "Exposición solar directa junto a ventana."
     },
     "costo": "$385 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "echeveria",
@@ -69,6 +79,8 @@
       "Sol": "Mínimo 4 horas de sol directo al día."
     },
     "costo": "$45 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   }
 ]

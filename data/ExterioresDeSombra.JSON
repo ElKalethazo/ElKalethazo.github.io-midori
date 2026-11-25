@@ -9,7 +9,9 @@
       "Sol": "Sombra luminosa o semisombra fresca sin sol directo."
     },
     "costo": "$200 MXN",
-    "color":"azul"
+    "colores": [
+      { "nombre": "azul", "hex": "#1E88E5" }
+    ]
   },
   {
     "id": "helecho_espada",
@@ -21,7 +23,9 @@
       "Sol": "Sombra total o parcial protegida de rayos directos."
     },
     "costo": "$155 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "begonia",
@@ -33,7 +37,9 @@
       "Sol": "Sombra con buena claridad indirecta."
     },
     "costo": "$50 MXN",
-    "color":"rosa"
+    "colores": [
+      { "nombre": "rosa", "hex": "#F06292" }
+    ]
   },
   {
     "id": "hosta",
@@ -45,7 +51,9 @@
       "Sol": "Semisombra a sombra profunda."
     },
     "costo": "$160 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "azalea",
@@ -57,7 +65,9 @@
       "Sol": "Sombra parcial o luz filtrada."
     },
     "costo": "$180 MXN",
-    "color":"rojo"
+    "colores": [
+      { "nombre": "rojo", "hex": "#E53935" }
+    ]
   },
   {
     "id": "astilbe",
@@ -69,6 +79,8 @@
       "Sol": "Sombra o semisombra húmeda."
     },
     "costo": "$180 MXN",
-    "color":"rojo"
+    "colores": [
+      { "nombre": "rojo", "hex": "#E53935" }
+    ]
   }
 ]

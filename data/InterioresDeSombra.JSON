@@ -9,7 +9,9 @@
       "Sol": "Sombra luminosa o luz indirecta suave."
     },
     "costo": "$185 MXN",
-    "color":"blanco"
+    "colores": [
+      { "nombre": "blanco", "hex": "#F5F5F5" }
+    ]
   },
   {
     "id": "lengua_de_suegra",
@@ -21,7 +23,9 @@
       "Sol": "Tolera sombra media o baja sin luz directa."
     },
     "costo": "$195 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "potus",
@@ -33,7 +37,9 @@
       "Sol": "Luz indirecta baja a media."
     },
     "costo": "$130 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "zamioculca",
@@ -45,7 +51,9 @@
       "Sol": "Espacios con iluminación escasa o sombra interior."
     },
     "costo": "$290 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "aglaonema",
@@ -57,7 +65,9 @@
       "Sol": "Sombra media con claridad indirecta."
     },
     "costo": "$235 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   },
   {
     "id": "calatea",
@@ -69,6 +79,8 @@
       "Sol": "Sombra luminosa o luz indirecta baja."
     },
     "costo": "$280 MXN",
-    "color":"verde"
+    "colores": [
+      { "nombre": "verde", "hex": "#43A047" }
+    ]
   }
 ]

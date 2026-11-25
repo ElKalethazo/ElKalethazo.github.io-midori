@@ -9,7 +9,9 @@
       "Sol": "Mínimo 6 horas de luz solar directa al día."
     },
     "costo": "$65 MXN",
-    "color": "morado"
+    "colores": [
+      { "nombre": "morado", "hex": "#7E57C2" }
+    ]
   },
   {
     "id": "geranio",
@@ -21,7 +23,11 @@
       "Sol": "Pleno sol directo para mantener floración constante."
     },
     "costo": "$55 MXN",
-    "color": "naranja"
+    "colores": [
+      { "nombre": "rosa", "hex": "#F06292" },
+      { "nombre": "rojo", "hex": "#E53935" },
+      { "nombre": "blanco", "hex": "#F5F5F5" }
+    ]
   },
   {
     "id": "buganvilia",
@@ -33,7 +39,12 @@
       "Sol": "Sol directo intenso durante todo el día."
     },
     "costo": "$130 MXN",
-    "color": "rosa"
+    "colores": [
+      { "nombre": "rosa", "hex": "#F06292" },
+      { "nombre": "morado", "hex": "#7E57C2" },
+      { "nombre": "blanco", "hex": "#F5F5F5" },
+      { "nombre": "naranja", "hex": "#FB8C00" }
+    ]
   },
   {
     "id": "gazania",
@@ -44,7 +55,11 @@
       "Riego": "Bajo, 1 a 2 veces por semana en suelo bien drenado.",
       "Sol": "Luz solar directa intensa para que abran sus flores."
     },
-    "costo": "$40 MXN"
+    "costo": "$40 MXN",
+    "colores": [
+      { "nombre": "naranja", "hex": "#FB8C00" },
+      { "nombre": "amarillo", "hex": "#FDD835" }
+    ]
   },
   {
     "id": "lantana",
@@ -55,7 +70,12 @@
       "Riego": "Espaciado, solo cuando el sustrato esté seco.",
       "Sol": "Exposición solar directa continua."
     },
-    "costo": "$55 MXN"
+    "costo": "$55 MXN",
+    "colores": [
+      { "nombre": "naranja", "hex": "#FB8C00" },
+      { "nombre": "amarillo", "hex": "#FDD835" },
+      { "nombre": "rosa", "hex": "#F06292" }
+    ]
   },
   {
     "id": "rosal",
@@ -66,6 +86,12 @@
       "Riego": "Profundo 2 a 3 veces por semana sin mojar las hojas.",
       "Sol": "De 5 a 6 horas de sol directo diario."
     },
-    "costo": "$125 MXN"
+    "costo": "$125 MXN",
+    "colores": [
+      { "nombre": "rojo", "hex": "#E53935" },
+      { "nombre": "rosa", "hex": "#F06292" },
+      { "nombre": "blanco", "hex": "#F5F5F5" },
+      { "nombre": "amarillo", "hex": "#FDD835" }
+    ]
   }
 ]
