@@ -1,7 +1,7 @@
 <!-- Llama la clase TarjeteroPlantas -->
 <?php
     $basePath='../../';
-    require_once __DIR__.'TarjeteroPlantas.php';
+    require_once __DIR__.'/../../TarjeteroPlantas.php';
 ?>
 
 <!DOCTYPE html>
