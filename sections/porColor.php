@@ -19,7 +19,7 @@
             <section class="contenido">
                 <h2>Plantas por color</h2>
                 <p>¡Escoje el color que buscas y revisa nuestras sugerencias!</p>
-                <div class="circulo-cromatico" href="Circulo cromático">
+                <div class="circulo-cromatico" href="Circulo cromático">Aqui esta el circulo</div>
             </section>
         </main>
     </body>
