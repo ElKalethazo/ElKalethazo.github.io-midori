@@ -26,7 +26,7 @@
                 <p>Plantas ideales para espacios dentro de casa con mucha luz natural cerca de una ventana.</p>
                     
                     <?php
-                        $interiorSol = new TarjeteroPlantas(__DIR__.'/../../data/InterioresDeSol.JSON', $basePath);
+                        $interiorSol = new TarjeteroPlantas(__DIR__.'/../../data/InterioresDeSOL.JSON', $basePath);
                         $interiorSol->renderizar();
                     ?>
 
