@@ -1,6 +1,6 @@
 <?php
     $basePath = '../';
-    require_once __DIR__ . '/../BuscadorPorColor.php';
+    require_once __DIR__ . '/../buscadorPorColor.php';
 
     $catalogos = [
         __DIR__ . '/../data/InterioresDeSol.JSON',
