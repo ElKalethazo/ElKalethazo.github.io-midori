@@ -1,3 +1,9 @@
+<!-- Llama la clase TarjeteroPlantas -->
+<?php
+    $basePath='../../';
+    require_once __DIR__.'/../../TarjeteroPlantas.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -12,7 +18,6 @@
 
     <body>
         <?php 
-            $basePath = '../../';
             include '../../items/header.php'; 
         ?>
         <main>
