@@ -32,7 +32,6 @@
                 
                 <div class="container-color">
                     <input type="color" class="selector-color" id="colorPicker" value="#e63946">
-                    <button type="button" class="btn-buscar-color" id="btnBuscarColor">Buscar tono</button>
                 </div>
 
                 <?php $buscador->renderizarParaFiltro(); ?>
