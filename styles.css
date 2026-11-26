@@ -324,12 +324,12 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    color: #fff;
-    padding: 4px 10px;
+    color: #fff; /*Da un tono blanco a los números del precio*/
+    padding: 4px 10px; /**/
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.9rem;
-    
+    font-size: 0.9rem; /*Ta*/
+    background-color: #00000076; /*Da un fondo negro difuminado para los números */
 }
 
 .tarjeta-cuerpo {
