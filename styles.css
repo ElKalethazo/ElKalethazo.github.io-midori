@@ -435,7 +435,8 @@ body {
   /* Estilos del selector de color */
   .selector-color {
     display: block;
-    margin: 50px auto;
+    margin: 160px auto;
     width: 100px;
     height: 40px;
+    border-radius: 50%;
   }
