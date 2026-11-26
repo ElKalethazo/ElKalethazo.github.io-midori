@@ -45,7 +45,7 @@
                     sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
             
                 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qbg48liRIpc?si=-WmMdZZ31moTi7U-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/qbg48liRIpc?si=-WmMdZZ31moTi7U-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 
                 
                 <h2>Nuestras categorías...</h2>
