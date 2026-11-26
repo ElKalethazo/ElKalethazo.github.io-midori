@@ -259,8 +259,6 @@ body {
     color: var(--font-color);
     font-family: 'Barlow Condensed', sans-serif;
     border-radius: 18px;
-    box-shadow: 0 12px 28px rgba(44, 53, 41, 0.14);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -421,25 +419,13 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-iframe[src*="youtube"] {
-    width: 100% !important;
-    height: 170px !important;
-    border-radius: 10px;
+/*IFRAMES DE YOUTUBE Y GOOGLEMAPS*/
+.yt,
+.maps {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
     border: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-    align-items: center;
-    text-align: center;
-}
-
-iframe[src*="maps"] {
-    width: 100% !important;
-    height: 170px !important;
     border-radius: 10px;
-    border: none;
-    margin-top: auto;
-
-    align-items: center;
-    text-align: center;
 }
