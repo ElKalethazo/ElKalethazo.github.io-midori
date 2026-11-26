@@ -19,7 +19,10 @@
             <section class="contenido">
                 <h2>Plantas por color</h2>
                 <p>¡Escoje el color que buscas y revisa nuestras sugerencias!</p>
-                    <input type="color" class="selector-color" id="colorPicker" value="#ff0000">
+                <div class="container-color">
+                    <input type="color" class="selector-color" id="colorPicker" value="#ffffff">
+
+                </div>
             </section>
         </main>
     </body>
