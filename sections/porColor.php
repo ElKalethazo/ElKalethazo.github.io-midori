@@ -1,3 +1,20 @@
+<?php
+    $basePath = '../';
+    require_once __DIR__ . '/../BuscadorPorColor.php';
+
+    // Capturamos el color enviado por el usuario (por defecto un verde/rosa inicial)
+    $colorSeleccionado = $_GET['color'] ?? '#e63946';
+
+    // Cargamos todos los catálogos JSON disponibles
+    $catalogos = [
+        __DIR__ . '/../data/InterioresDeSol.JSON',
+        __DIR__ . '/../data/InterioresDeSombra.JSON',
+        __DIR__ . '/../data/ExterioresDeSol.JSON',
+        __DIR__ . '/../data/ExterioresDeSombra.JSON'
+    ];
+
+    $buscador = new BuscadorPorColor($catalogos, $basePath);
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -11,18 +28,21 @@
     </head>
 
     <body>
-        <?php 
-            $basePath = '../';
-            include '../items/header.php'; 
-        ?>
+        <?php include __DIR__ . '/../items/header.php'; ?>
         <main>
             <section class="contenido">
                 <h2>Plantas por color</h2>
-                <p>¡Escoje el color que buscas y revisa nuestras sugerencias!</p>
-                <div class="container-color">
-                    <input type="color" class="selector-color" id="colorPicker" value="#ffffff">
+                <p>¡Escoge el color que buscas y revisa nuestras sugerencias!</p>
+                
+                <form method="GET" action="" class="container-color">
+                    <input type="color" name="color" class="selector-color" id="colorPicker" value="<?php echo htmlspecialchars($colorSeleccionado); ?>">
+                    <button type="submit" class="btn-buscar-color">Buscar tono</button>
+                </form>
 
-                </div>
+                <?php
+                    // Renderiza las tarjetas más parecidas al color elegido
+                    $buscador->buscarYRenderizar($colorSeleccionado, 130);
+                ?>
             </section>
         </main>
     </body>
