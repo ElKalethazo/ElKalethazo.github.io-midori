@@ -1,8 +1,3 @@
-<?php
-    $basePath='../../';
-    require_once __DIR__.'/../../TarjeteroPlantas.php';
-?>
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -17,9 +12,7 @@
     </head>
 
     <body>
-        <?php 
-            include __DIR__.'/../../items/header.php';  
-        ?>
+        <?php include 'items/header.php'; ?>
 
         <main>
             <!-- Letrero de la tienda -->
