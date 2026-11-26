@@ -25,7 +25,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     background-color: var(--background-body-content);
     padding: 18px 50px;
     z-index: 1000;
@@ -127,7 +127,7 @@ body {
 
 /*LETRERO DE LA TIENDA*/
 .letrero-tienda {
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     min-height: 450px;
     background-image: linear-gradient(rgba(28, 42, 28, 0.55), rgba(28, 42, 28, 0.55)), url('images/principal/fondo.jpg');
     background-size: cover;
@@ -204,7 +204,7 @@ body {
     position: absolute;
     top: -18px;
     left: -18px;
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     height: 100%;
     background-color: #B7D3A8;
     border-radius: 16px;
@@ -213,7 +213,7 @@ body {
 
 .marco-foto img {
     position: relative;
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
@@ -251,7 +251,7 @@ body {
 /* TARJETA DE CONTACTO */
 .contacto-tarjeta {
     position: relative;
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     max-width: 500px;
     margin: 45px auto;
     padding: 36px 32px;
@@ -275,7 +275,7 @@ body {
 
 /* Bloques internos separados por línea sutil */
 .contacto-bloque {
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     padding-top: 14px;
     border-top: 1px solid rgba(54, 69, 50, 0.15);
 }
@@ -315,7 +315,7 @@ body {
 }
 
 .tarjeta-img-contenedor img {
-    width: 100%;
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     height: 100%;
     object-fit: cover;
 }
@@ -422,10 +422,31 @@ body {
 /*IFRAMES DE YOUTUBE Y GOOGLEMAPS*/
 .yt,
 .maps {
-    display: block;
-    width: 100%;
+    display: block; /*Ocupa todo el ancho disponible de su contenedor.*/
+    width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     max-width: 800px;
     margin: 20px auto;
     border: none;
     border-radius: 10px;
+}
+
+
+/* CIRCULO CORMÁTICO */
+.circulo-cromatico {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* Define los colores primarios, secundarios y terciarios en orden */
+  background: conic-gradient(
+    red 0deg 30deg,
+    orange 30deg 60deg,
+    yellow 60deg 90deg,
+    lime 90deg 120deg,
+    green 120deg 150deg,
+    cyan 150deg 180deg,
+    blue 180deg 210deg,
+    violet 210deg 240deg,
+    magenta 240deg 270deg,
+    red 270deg 360deg
+  );
 }

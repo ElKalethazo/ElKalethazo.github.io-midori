@@ -18,13 +18,8 @@
         <main>
             <section class="contenido">
                 <h2>Plantas por color</h2>
-                <p>Explora nuestra selección organizada por las tonalidades de sus hojas y flores para armonizar con cada rincón de tu hogar.</p>
-
-                <h4>Tonos verdes y jaspeados</h4>
-                <p>Follajes intensos, variegados y texturas naturales ideales para aportar frescura visual.</p>
-
-                <h4>Floración cálida y vibrante</h4>
-                <p>Especies con acentos en rojo, naranja, amarillo y rosa para llenar de luz tus espacios.</p>
+                <p>¡Escoje el color que buscas y revisa nuestras sugerencias!</p>
+                <div class="circulo-cromatico" href="Circulo cromático">
             </section>
         </main>
     </body>
