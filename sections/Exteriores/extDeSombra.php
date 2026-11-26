@@ -1,3 +1,9 @@
+<!-- Llama la clase TarjeteroPlantas -->
+<?php
+    $basePath='../../';
+    require_once __DIR__.'/../../TarjeteroPlantas.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -12,33 +18,17 @@
 
     <body>
         <?php 
-            $basePath = '../../';
-            include '../../items/header.php'; 
+            include __DIR__.'../../items/header.php'; 
         ?>
         <main>
             <section class="contenido">
                 <h2>Exteriores de Sombra</h2>
                 <p>Variedades ideales para terrazas techadas, patios frescos o zonas bajo árboles sin sol directo.</p>
-
-                <div class="tarjetero">
-                    <div class="tarjeta-planta">
-                        <img src="../../images/hortensia.jpg" alt="Hortensia">
-                        <h4>Hortensia</h4>
-                        <p>Arbusto de flores vistosas que prefiere lugares frescos, semisombra y riego constante.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/helecho.jpg" alt="Helecho Boston">
-                        <h4>Helecho Boston</h4>
-                        <p>Follaje frondoso que luce mejor en exteriores protegidos del sol fuerte.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/begonia.jpg" alt="Begonia">
-                        <h4>Begonia</h4>
-                        <p>Aporta color continuo en terrazas sombreadas con tierra ligeramente húmeda.</p>
-                    </div>
-                </div>
+                    
+                    <?php
+                        $exteriorSombra = new TarjeteroPlantas(__DIR__.'/../../data/ExterioresDeSombra.JSON', $basePath);
+                        $exteriorSombra->renderizar();
+                    ?>
             </section>
         </main>
     </body>

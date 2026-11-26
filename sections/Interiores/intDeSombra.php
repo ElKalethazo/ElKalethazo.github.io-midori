@@ -1,3 +1,9 @@
+<!-- Llama la clase TarjeteroPlantas -->
+<?php
+    $basePath='../../';
+    require_once __DIR__.'/../../TarjeteroPlantas.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -12,33 +18,16 @@
 
     <body>
         <?php 
-            $basePath = '../../';
-            include '../../items/header.php'; 
+            include __DIR__.'../../items/header.php'; 
         ?>
         <main>
             <section class="contenido">
                 <h2>Interiores de Sombra</h2>
                 <p>Especies que se adaptan perfectamente a habitaciones o rincones con poca luz directa.</p>
-
-                <div class="tarjetero">
-                    <div class="tarjeta-planta">
-                        <img src="../../images/cuna.jpg" alt="Cuna de Moisés">
-                        <h4>Cuna de Moisés</h4>
-                        <p>Destaca por sus flores blancas y su tolerancia a espacios sombreados con humedad media.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/potus.jpg" alt="Potus">
-                        <h4>Potus</h4>
-                        <p>Planta colgante de fácil cuidado que crece bien lejos de las ventanas.</p>
-                    </div>
-
-                    <div class="tarjeta-planta">
-                        <img src="../../images/zamioculca.jpg" alt="Zamioculca">
-                        <h4>Zamioculca</h4>
-                        <p>De hojas verdes brillantes, soporta ambientes con poca luz y riegos espaciados.</p>
-                    </div>
-                </div>
+                    <?php
+                        $interiorSombra = new TarjeteroPlantas(__DIR__.'/../../data/InterioresDeSombra.JSON', $basePath);
+                        $interiorSombra->renderizar();
+                    ?>
             </section>
         </main>
     </body>
