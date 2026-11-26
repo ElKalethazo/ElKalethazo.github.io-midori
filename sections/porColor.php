@@ -1,6 +1,6 @@
 <?php
     $basePath = '../';
-    require_once __DIR__ . '/../BuscadorPorColor.php';
+    require_once __DIR__ . '/../buscadorPorColor.php';
 
     // Capturamos el color enviado por el usuario (por defecto un verde/rosa inicial)
     $colorSeleccionado = $_GET['color'] ?? '#e63946';
