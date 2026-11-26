@@ -435,7 +435,7 @@ body {
 
 .selector-color {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 80px;
     border-radius: 50%;
 }
