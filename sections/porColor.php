@@ -19,7 +19,9 @@
             <section class="contenido">
                 <h2>Plantas por color</h2>
                 <p>¡Escoje el color que buscas y revisa nuestras sugerencias!</p>
-                <div class="circulo-cromatico" href="Circulo cromático">Aqui esta el circulo</div>
+                    <div class="circulo-cromatico"></div>
+                    <input type="color" class="selector-color" id="colorPicker" value="#ff0000">
+
             </section>
         </main>
     </body>

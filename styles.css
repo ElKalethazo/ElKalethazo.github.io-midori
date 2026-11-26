@@ -432,21 +432,23 @@ body {
 
 
 /* CIRCULO CORMÁTICO */
-.circulo-cromatico {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  /* Define los colores primarios, secundarios y terciarios en orden */
-  background: conic-gradient(
-    red 0deg 30deg,
-    orange 30deg 60deg,
-    yellow 60deg 90deg,
-    lime 90deg 120deg,
-    green 120deg 150deg,
-    cyan 150deg 180deg,
-    blue 180deg 210deg,
-    violet 210deg 240deg,
-    magenta 240deg 270deg,
-    red 270deg 360deg
-  );
-}
+  /* Contenedor del círculo cromático */
+  .circulo-cromatico {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* Gradiente cónico para simular el círculo cromático */
+    background: conic-gradient(
+      red, yellow, lime, aqua, blue, magenta, red
+    );
+    margin: 20px auto;
+    border: 2px solid #333;
+  }
+
+  /* Estilos del selector de color */
+  .selector-color {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 40px;
+  }
