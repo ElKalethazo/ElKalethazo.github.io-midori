@@ -18,7 +18,7 @@
 
     <body>
         <?php 
-            include '../../items/header.php'; 
+            include __DIR__.'/../../items/header.php'; 
         ?>
         <main>
             <section class="contenido">
