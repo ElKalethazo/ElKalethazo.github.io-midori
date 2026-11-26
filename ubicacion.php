@@ -1,3 +1,8 @@
+<?php
+    $basePath='../../';
+    require_once __DIR__.'/../../TarjeteroPlantas.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -11,7 +16,9 @@
     </head>
 
     <body>
-        <?php include 'items/header.php'; ?>
+        <?php 
+            include __DIR__.'/../../items/header.php';  
+        ?>
         <main>
             <section class="contenido">
                 <h2>Nuestra ubicación</h2>
