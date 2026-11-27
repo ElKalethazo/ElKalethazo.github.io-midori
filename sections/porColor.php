@@ -41,7 +41,6 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const colorPicker = document.getElementById('colorPicker');
-                const btnBuscar = document.getElementById('btnBuscarColor');
                 const grid = document.getElementById('gridPlantasColor');
                 const mensajeVacio = document.getElementById('mensajeSinResultados');
                 const tarjetas = Array.from(grid.querySelectorAll('.tarjeta-planta'));
@@ -105,7 +104,6 @@
                 }
 
                 // Se ejecuta al pulsar el botón y también en vivo al mover el selector
-                btnBuscar.addEventListener('click', () => filtrarPorColor(130));
                 colorPicker.addEventListener('input', () => filtrarPorColor(130));
 
                 // Filtro inicial al cargar la página
