@@ -55,3 +55,4 @@ class BuscadorPorColor extends TarjeteroPlantas {
         echo '<p id="mensajeSinResultados" style="display:none;">No encontramos plantas con un tono muy parecido. Intenta con otro matiz.</p>';
     }
 }
+//Nota: se omite la etiqueta de cierre de PHP para evitar salidas accidentales al final del archivo.
