@@ -1,15 +1,19 @@
+# Nombre que se muestra en la pestaña "Actions" de GitHub
 name: Compilar PHP y desplegar en GitHub Pages
 
+# Eventos que activan el flujo de trabajo
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: ["main"]   # Cada vez que se sube código a la rama main
+  workflow_dispatch:     # También permite ejecutarlo manualmente desde GitHub
 
+# Permisos mínimos que necesita el flujo para publicar el sitio
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read   # Leer el código del repositorio
+  pages: write     # Publicar en GitHub Pages
+  id-token: write  # Verificar la identidad del despliegue
 
+# Evita que dos despliegues se ejecuten al mismo tiempo
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -22,38 +26,80 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Descarga el código del repositorio en la máquina de GitHub
       - name: Descargar código del repositorio
         uses: actions/checkout@v4
 
+      # 2. Instala una versión fija de PHP para que el resultado no cambie si GitHub actualiza sus máquinas
+      - name: Instalar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      # 3. Convierte las páginas PHP en HTML estático (GitHub Pages no ejecuta PHP)
       - name: Compilar archivos PHP a HTML estático
+        shell: bash
         run: |
+          # Detiene el proceso ante cualquier error (-e), variable sin definir (-u) o fallo dentro de una tubería (pipefail)
+          set -euo pipefail
+
+          # Copia el proyecto a la carpeta _site (sin archivos internos de Git)
           mkdir -p _site
           rsync -av --exclude='.git' --exclude='.github' --exclude='_site' ./ _site/
 
           cd _site
+
           # Compila todos los .php a .html (ignorando los parciales dentro de items/)
-          find . -type f -name "*.php" ! -path "./items/*" | while read -r file; do
+          # -print0 y read -d '' permiten manejar nombres de archivo con espacios
+          find . -type f -name "*.php" ! -path "./items/*" -print0 | while IFS= read -r -d '' file; do
             dir=$(dirname "$file")
             base=$(basename "$file" .php)
+
+            # Omite los archivos que no son páginas (por ejemplo, los que solo definen clases):
+            # una página siempre contiene <!DOCTYPE
+            if ! grep -qi '<!DOCTYPE' "$file"; then
+              echo "Omitiendo (no es una página): $file"
+              continue
+            fi
+
             echo "Compilando $file -> $dir/$base.html"
-            (cd "$dir" && php "$base.php" > "$base.html")
+            errores=$(mktemp)
+
+            # Ejecuta PHP desde la carpeta del archivo (para que las rutas relativas funcionen).
+            # Los avisos y errores se guardan aparte: si hay cualquiera, se considera un fallo
+            if ! (cd "$dir" && php -d display_errors=stderr -d log_errors=0 -d error_reporting=-1 "$base.php" > "$base.html" 2> "$errores") || [ -s "$errores" ]; then
+              echo "::error file=$file::Error al compilar $file"
+              cat "$errores"
+              exit 1
+            fi
           done
 
+          # Verifica que ninguna página generada haya quedado vacía
+          if [ -n "$(find . -type f -name '*.html' -empty)" ]; then
+            echo "::error::Se generaron archivos HTML vacíos:"
+            find . -type f -name '*.html' -empty
+            exit 1
+          fi
+
           # Cambia los enlaces internos de .php a .html en los archivos generados
-          find . -type f -name "*.html" -exec sed -i -E 's/([a-zA-Z0-9_-]+)\.php/\1.html/g' {} +
+          # (solo dentro de href="...", para no alterar otro tipo de texto)
+          find . -type f -name "*.html" -exec sed -i -E 's/(href="[^"]*)\.php/\1.html/g' {} +
 
           # Elimina los .php originales y la carpeta items/ de la versión pública
           find . -type f -name "*.php" -delete
           rm -rf items
 
+      # 4. Prepara la configuración necesaria de GitHub Pages
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
+      # 5. Empaqueta la carpeta _site como artefacto para publicarlo
       - name: Subir artefacto de Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
 
+      # 6. Publica el artefacto en GitHub Pages
       - name: Desplegar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

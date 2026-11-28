@@ -1,18 +1,44 @@
 <?php
+//Clase reutilizable que construye "tarjetas" en HTML a partir de una lista de elementos guardada en un archivo JSON.
 class TarjeteroPlantas {
+    //Arreglo con los elementos (plantas) que se van a mostrar
     private $plantas = [];
+    //Prefijo de ruta para llegar a la raíz del sitio desde la página que usa la clase (ej. '../../')
     private $basePath;
     
     //El constructor recibe la ruta del archivo de tipo JSON y carga los datos
     public function __construct($rutaJson, $basePath = ''){
         $this->basePath = $basePath;
+        //Solo carga los datos si se indicó una ruta.
+        //Las clases hijas pueden enviar '' para cargar sus propios datos.
+        if($rutaJson !== ''){
+            $this->plantas = $this->cargarJson($rutaJson);
+        }
+    }
+
+    //Lee un archivo JSON y lo convierte en un arreglo de PHP.
+    //Está separado del constructor para poder reutilizarlo en las clases hijas.
+    protected function cargarJson($rutaJson){
         //Comprueba la existencia del archivo en la ruta dada.
         //De no ser así, manda una excepción
-        if(file_exists($rutaJson)){
-            //Empieza a leer el contenido del archivo JSON
-            $contenido = file_get_contents($rutaJson);
-            $this->plantas = json_decode($contenido,true)?? [];
+        if(!file_exists($rutaJson)){
+            throw new RuntimeException("No se encontró el archivo JSON: {$rutaJson}");
         }
+        //Empieza a leer el contenido del archivo JSON
+        $contenido = file_get_contents($rutaJson);
+        if($contenido === false){
+            throw new RuntimeException("No se pudo leer el archivo JSON: {$rutaJson}");
+        }
+        //Elimina la marca BOM (caracteres invisibles al inicio) que algunos editores agregan y que impide leer el JSON
+        $contenido = preg_replace('/^\xEF\xBB\xBF/', '', $contenido);
+
+        //Convierte el texto JSON en un arreglo asociativo
+        $datos = json_decode($contenido, true);
+        //Si el JSON está mal escrito no se obtiene un arreglo, así que se avisa con un mensaje claro
+        if(!is_array($datos)){
+            throw new RuntimeException("El archivo JSON no es válido: {$rutaJson} (" . json_last_error_msg() . ")");
+        }
+        return $datos;
     }
 
     //Método principal para imprimir todo el contenedor de las tarjetas
@@ -35,16 +61,25 @@ class TarjeteroPlantas {
         echo '</div>';
     }
 
+    //Prepara un texto para mostrarlo de forma segura en HTML.
+    //Si el dato no existe devuelve texto vacío, así se evitan avisos de "clave no definida".
+    private function limpiar($valor){
+        return htmlspecialchars((string)($valor ?? ''), ENT_QUOTES, 'UTF-8');
+    }
+
     //Método para mostrar los colores disponibles de cada planta
     private function generarColores($colores){ 
         //Si no hay colores dentro del arreglo, no regresa nada.
         if (empty($colores))return '';
 
+        //Reinicia los índices (0, 1, 2...) para poder acceder al primer color sin importar cómo vengan en el JSON
+        $colores = array_values($colores);
+
         //Si tiene 1 color, solo muestra ese único color
         if(count($colores)==1){
             $c = $colores[0];
-            $nombreColor = ucfirst(htmlspecialchars($c['nombre']));
-            $hex = htmlspecialchars($c['hex']);
+            $nombreColor = ucfirst($this->limpiar($c['nombre'] ?? ''));
+            $hex = $this->limpiar($c['hex'] ?? '');
 
             return "
                 <span class='color-label'>Tono:</span>
@@ -60,8 +95,8 @@ class TarjeteroPlantas {
         $itemsLista = '';
 
         foreach ($colores as $c) {
-            $nombreColor = ucfirst(htmlspecialchars($c['nombre']));
-            $hex = htmlspecialchars($c['hex']);
+            $nombreColor = ucfirst($this->limpiar($c['nombre'] ?? ''));
+            $hex = $this->limpiar($c['hex'] ?? '');
             
             $muestras .= "<span class='muestra-hex' style='background-color: {$hex};' title='{$nombreColor}'></span>";
             $itemsLista .= "<li><span class='muestra-hex-mini' style='background-color: {$hex};'></span> {$nombreColor}</li>";
@@ -82,29 +117,33 @@ class TarjeteroPlantas {
     }
     
     //Construcción del HTML individual de cada tarjetero de cada
-    //planta
-    protected function crearTarjeta($planta) {
-        $nombre = htmlspecialchars($planta['nombre']);
-        $cientifico = htmlspecialchars($planta['nombre_cientifico']);
-        $imagen = htmlspecialchars($this->basePath . $planta['imagen']);
-        $costo = htmlspecialchars($planta['costo']);
-        $riego = htmlspecialchars($planta['cuidados']['Riego']);
-        $sol = htmlspecialchars($planta['cuidados']['Sol']);
+    //planta.
+    //$atributosExtra permite a las clases hijas agregar atributos a la etiqueta <article>
+    //(por ejemplo ' data-colores="..."'). Debe empezar con un espacio.
+    protected function crearTarjeta($planta, $atributosExtra = '') {
+        //Cada dato se limpia y, si falta en el JSON, queda vacío en lugar de provocar un error
+        $id = $this->limpiar($planta['id'] ?? '');
+        $nombre = $this->limpiar($planta['nombre'] ?? '');
+        $cientifico = $this->limpiar($planta['nombre_cientifico'] ?? '');
+        $imagen = $this->limpiar($this->basePath . ($planta['imagen'] ?? ''));
+        $costo = $this->limpiar($planta['costo'] ?? '');
+        $riego = $this->limpiar($planta['cuidados']['Riego'] ?? '');
+        $sol = $this->limpiar($planta['cuidados']['Sol'] ?? '');
         
         // Generamos la sección de colores (único o sub-lista)
-        $htmlColores = $this->generarColores($planta['colores']);
+        $htmlColores = $this->generarColores($planta['colores'] ?? []);
 
         return <<<HTML
-        <article class="tarjeta-planta" id="planta-{$planta['id']}">
+        <article class="tarjeta-planta" id="planta-{$id}"{$atributosExtra}>
             <div class="tarjeta-img-contenedor">
                 <img src="{$imagen}" alt="{$nombre}" loading="lazy">
                 <span class="tarjeta-costo">{$costo}</span>
             </div>
-            
+
             <div class="tarjeta-cuerpo">
                 <h3 class="tarjeta-titulo">{$nombre}</h3>
                 <p class="tarjeta-cientifico"><em>{$cientifico}</em></p>
-                
+
                 <div class="tarjeta-cuidados">
                     <p><strong>Riego:</strong> {$riego}</p>
                     <p><strong>Sol:</strong> {$sol}</p>
@@ -116,6 +155,7 @@ class TarjeteroPlantas {
             </div>
         </article>
         HTML;
-    }    
-}   
-?>
+    }
+}
+//Nota: en archivos que solo contienen clases se omite la etiqueta de cierre de PHP,
+//así se evita que espacios o saltos de línea al final se impriman por accidente.
