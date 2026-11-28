@@ -12,9 +12,7 @@ class TarjeteroPlantas {
             //Empieza a leer el contenido del archivo JSON
             $contenido = file_get_contents($rutaJson);
             $this->plantas = json_decode($contenido,true)?? [];
-        } /*else {
-            echo "<p class='error'>Error: No se encontró el archivo $rutaJson</p>";
-        }*/
+        }
     }
 
     //Método principal para imprimir todo el contenedor de las tarjetas
@@ -30,13 +28,14 @@ class TarjeteroPlantas {
         //en este caso el arreglo que ahora contiene las plantas.
         echo '<div class="tarjetero-grid">';
         
+        //Recorre el arreglo para crear los trajeteros planta por planta con foreach
         foreach($this->plantas as $planta){
             echo $this->crearTarjeta($planta);
         }
         echo '</div>';
     }
 
-    //Método para mostrar lso colores disponibles de cada planta
+    //Método para mostrar los colores disponibles de cada planta
     private function generarColores($colores){ 
         //Si no hay colores dentro del arreglo, no regresa nada.
         if (empty($colores))return '';
@@ -117,8 +116,6 @@ class TarjeteroPlantas {
             </div>
         </article>
         HTML;
-    }
-        
+    }    
 }   
-
 ?>

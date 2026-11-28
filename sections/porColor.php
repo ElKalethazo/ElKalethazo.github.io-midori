@@ -1,3 +1,4 @@
+//Empieza a cargar todos los recursos necesarios de JSON
 <?php
     $basePath = '../';
     require_once __DIR__ . '/../buscadorPorColor.php';
@@ -9,6 +10,7 @@
         __DIR__ . '/../data/ExterioresDeSombra.JSON'
     ];
 
+    //Invoca el objeto que funcionará como filtro.
     $buscador = new BuscadorPorColor($catalogos, $basePath);
 ?>
 <!DOCTYPE html>
@@ -17,6 +19,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Por color - Midori</title>
+        <!--Cargar los links de las fuentes a usar.-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Cormorant+Garamond:ital,wght@1,500&family=Merienda:wght@500;700&display=swap" rel="stylesheet">
@@ -24,6 +27,7 @@
     </head>
 
     <body>
+        <!--Invoca header.-->
         <?php include __DIR__ . '/../items/header.php'; ?>
         <main>
             <section class="contenido">
@@ -39,12 +43,14 @@
         </main>
 
         <script>
+            //Añade el eventlistener para llamar a la clase
             document.addEventListener('DOMContentLoaded', () => {
-                const colorPicker = document.getElementById('colorPicker');
+                const colorPicker = document.getElementById('colorPicker');//Reacciona al mismo tiempo que se modifica el color del selector
                 const grid = document.getElementById('gridPlantasColor');
                 const mensajeVacio = document.getElementById('mensajeSinResultados');
                 const tarjetas = Array.from(grid.querySelectorAll('.tarjeta-planta'));
 
+                //Convierte un color en formato hexadecimal a un arreglo RGB
                 function hexARgb(hex) {
                     hex = hex.replace('#', '').trim();
                     if (hex.length === 3) {
@@ -57,6 +63,8 @@
                     ];
                 }
 
+                //Calcula qué tan parecidos son los dos colores mediante su distancia
+                //Al acercarse a 0, determina que los dos colores son casi identicos
                 function calcularDistancia(hex1, hex2) {
                     const [r1, g1, b1] = hexARgb(hex1);
                     const [r2, g2, b2] = hexARgb(hex2);
@@ -67,28 +75,37 @@
                     );
                 }
 
+                /*Filtra y ordena las tarjetas de plantas según su similitud con el color seleccionado. */
                 function filtrarPorColor(tolerancia = 130) {
+                    //Obtiene el color seleccionado
                     const hexUsuario = colorPicker.value;
+                    //Arreglo temporal para guardar las tarjetas que pasen en el filtro jumto
+                    //con su puntaje
                     const coincidentes = [];
 
                     tarjetas.forEach(tarjeta => {
+                        //Lee unicamente los colores de data-colors 
                         const rawColores = tarjeta.getAttribute('data-colores');
+                        //Si la tarjeta no tiene colores asignados, se oculta y pasa a la siguiente
                         if (!rawColores) {
                             tarjeta.style.display = 'none';
                             return;
                         }
 
-                        const listaHex = rawColores.split(',');
+                        //Separa los distintos codigos que una planta puede tener
+                        const listaHex = rawColores.split(','); 
                         let menorDistancia = 999;
-
+                        //Compara el color del usuario contra cada color de la planta y guarda la menor diferencia
                         listaHex.forEach(hexPlanta => {
                             const dist = calcularDistancia(hexUsuario, hexPlanta);
                             if (dist < menorDistancia) menorDistancia = dist;
                         });
 
+                        //Si el color más cercano de la planta entra en el margen de tolerancia, se guarda
                         if (menorDistancia <= tolerancia) {
                             coincidentes.push({ elemento: tarjeta, distancia: menorDistancia });
                         } else {
+                            //Sino, se oculta la tarjeta
                             tarjeta.style.display = 'none';
                         }
                     });
@@ -103,7 +120,7 @@
                     mensajeVacio.style.display = coincidentes.length === 0 ? 'block' : 'none';
                 }
 
-                // Se ejecuta al pulsar el botón y también en vivo al mover el selector
+                // Se ejecuta en vivo al mover el selector
                 colorPicker.addEventListener('input', () => filtrarPorColor(130));
 
                 // Filtro inicial al cargar la página

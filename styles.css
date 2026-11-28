@@ -11,6 +11,7 @@
     --font-color-nav: #F4F5DF;
     --background-blur: #b9c3b659; 
     --font-color-withe: #ffffff;
+    --hcolor-content:#364532;
 }
 
 body {
@@ -33,7 +34,6 @@ body {
     box-shadow: 0 2px 10px rgba(44, 53, 41, 0.12); /*Da un efecto de sombra a la barra de navegación*/
 }
 
-/*  */
 .nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -84,7 +84,6 @@ body {
     z-index: 200;
 }
 
-/**/
 .has-submenu:hover > .sub-menu,
 .has-submenu:focus-within > .sub-menu {
     opacity: 1;
@@ -122,11 +121,36 @@ body {
     transform: translateX(2px);
 }
 
-/* Segundo nivel: se abre hacia la derecha */
 .sub-menu-derecha {
     top: 0;
     left: calc(100% + 8px);
     min-width: 190px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: #364532; /* Mismo verde musgo oscuro de los submenús */
+    color: var(--font-color-nav); /* Crema claro suave (#F4F5DF) */
+    padding: 32px 20px;
+    margin-top: 60px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(44, 53, 41, 0.12);
+}
+
+.footer .extra-info {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.4px;
+}
+
+.footer .extra-info label {
+    color: #B7D3A8; /* Verde salvia claro para destacar los iconos */
+    margin-right: 6px;
 }
 
 /*LETRERO DE LA TIENDA*/
@@ -236,7 +260,7 @@ body {
     font-family: 'Merienda', cursive;
     font-size: 2rem;
     margin-bottom: 12px;
-    color: #364532;
+    color: var(--hcolor-content);
 }
 
 .contenido p {
@@ -435,12 +459,25 @@ body {
     border-radius: 10px;
 }
 
-
 /* SELECTOR DE COLOR */
 .selector-color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     display: block;
-    width: 100%;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid #364532; /* Borde sutil a juego con la paleta */
     border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(44, 53, 41, 0.2);
+}
+
+/* Hace que la muestra de color ocupe el 100% del círculo */
+.selector-color::-webkit-color-swatch {
     border: none;
+    border-radius: 50%;
 }
