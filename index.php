@@ -1,3 +1,7 @@
+<?php
+    //Ruta para llegar a la raíz del sitio. Está vacía porque esta página ya está en la raíz.
+    $basePath = '';
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -8,11 +12,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Cormorant+Garamond:ital,wght@1,500&family=Merienda:wght@500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <!-- Hoja de estilos del sitio (el número ?v= se cambia para obligar al navegador a descargar la versión nueva) -->
+        <link rel="stylesheet" href="styles.css?v=4">
     </head>
 
     <body>
-        <?php include 'items/header.php'; ?>
+        <!--Invoca header.-->
+        <?php include __DIR__ . '/items/header.php'; ?>
 
         <main>
             <!-- Letrero de la tienda -->
@@ -44,7 +50,8 @@
                     tu espacio realmente necesita —ya sean plantas de interior o exterior, de sol directo,
                     sombra o por gama de colores— para que elegir tu próxima compañera verde sea sencillo y seguro.</p>
             
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qbg48liRIpc?si=-WmMdZZ31moTi7U-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video incrustado de YouTube (la clase "yt" le da su tamaño y estilo desde styles.css) -->
+                <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/qbg48liRIpc?si=-WmMdZZ31moTi7U-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 
 
                 <h4>Nuestra historia</h4>
@@ -69,5 +76,8 @@
 
             </section>
         </main>
+
+        <!--Invoca footer.-->
+        <?php include __DIR__ . '/items/footer.php'; ?>
     </body>
 </html>

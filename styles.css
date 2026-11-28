@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES DE COLOR: paleta reutilizable en todo el sitio (se usan escribiendo var(--nombre)) */
 :root{
     --background-body-content:#E4E3A3; 
     --font-color:#2c3529;
@@ -14,12 +15,21 @@
     --hcolor-content:#364532;
 }
 
+/* ESTILOS BASE DE LA PÁGINA: fondo, color de texto, tipografía y distribución en columna */
 body {
     font-size: 1rem;
     background-color: var(--background-body-content); /* Amarillo pastel oliva del fondo */
     color: var(--font-color);
     font-family: 'Barlow Condensed', sans-serif;
     padding-top: 80px; /* Compensa la altura del header fijo */
+    min-height: 100vh; /* La página ocupa al menos toda la pantalla */
+    display: flex; /* Coloca header, contenido y footer en una columna */
+    flex-direction: column;
+}
+
+/* El contenido principal crece para empujar el footer hacia abajo cuando hay poco texto */
+main {
+    flex: 1 0 auto;
 }
 
 /* BARRA DE NAVEGACIÓN */
@@ -34,6 +44,7 @@ body {
     box-shadow: 0 2px 10px rgba(44, 53, 41, 0.12); /*Da un efecto de sombra a la barra de navegación*/
 }
 
+/* Contenedor que centra y alinea el menú */
 .nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -42,6 +53,7 @@ body {
     justify-content: flex-start;
 }
 
+/* Lista principal del menú, en horizontal y sin viñetas */
 .menu {
     display: flex;
     align-items: center;
@@ -49,10 +61,12 @@ body {
     list-style: none;
 }
 
+/* Cada elemento del menú sirve de referencia para ubicar su submenú */
 .menu > li {
     position: relative;
 }
 
+/* Estilo común de los enlaces del menú */
 .menu a {
     display: flex;
     align-items: center;
@@ -84,6 +98,7 @@ body {
     z-index: 200;
 }
 
+/* Muestra el submenú al pasar el cursor o al navegar con el teclado */
 .has-submenu:hover > .sub-menu,
 .has-submenu:focus-within > .sub-menu {
     opacity: 1;
@@ -91,10 +106,12 @@ body {
     transform: translateY(0);
 }
 
+/* Referencia de posición para los submenús anidados */
 .sub-menu li {
     position: relative;
 }
 
+/* Enlaces dentro de los submenús */
 .sub-menu a {
     color: var(--font-color-nav); /* Crema claro suave para contraste sobre verde oscuro */
     font-size: 1.25rem;
@@ -104,23 +121,27 @@ body {
     justify-content: space-between;
 }
 
+/* Resalta el enlace al pasar el cursor o al enfocarlo con el teclado */
 .sub-menu a:hover,
 .sub-menu a:focus-visible {
     background-color: #B7D3A8;
     color: #2c3529;
 }
 
+/* Flecha que indica que ese elemento abre otro submenú */
 .sub-menu .has-submenu > a::after {
     content: "▸";
     color: #B7D3A8;
     transform: none;
 }
 
+/* Cambia el color y desplaza ligeramente la flecha al pasar el cursor */
 .sub-menu .has-submenu:hover > a::after {
     color: #2c3529;
     transform: translateX(2px);
 }
 
+/* Submenú anidado: se abre hacia la derecha del elemento que lo contiene */
 .sub-menu-derecha {
     top: 0;
     left: calc(100% + 8px);
@@ -138,6 +159,7 @@ body {
     box-shadow: 0 -2px 10px rgba(44, 53, 41, 0.12);
 }
 
+/* Bloque de texto con los datos de contacto del pie de página */
 .footer .extra-info {
     max-width: 800px;
     margin: 0 auto;
@@ -148,10 +170,16 @@ body {
     letter-spacing: 0.4px;
 }
 
+/* Iconos que acompañan cada dato del footer */
 .footer .extra-info label {
     color: #B7D3A8; /* Verde salvia claro para destacar los iconos */
     margin-right: 6px;
 }
+
+/* Iconos del footer: se dibujan con emojis para no depender de librerías externas de iconos */
+.icon-location::before { content: "📍"; }
+.icon-tablet::before { content: "🌐"; }
+.icon-phone::before { content: "📞"; }
 
 /*LETRERO DE LA TIENDA*/
 .letrero-tienda {
@@ -186,12 +214,14 @@ body {
     align-items: flex-start;
 }
 
+/* Agrupa el nombre y el subtítulo de la marca en una misma fila */
 .titulo-principal {
     display: flex;
     align-items: center;
     gap: 28px;
 }
 
+/* Nombre principal de la marca */
 .titulo-principal h1 {
     font-family: 'Merienda', cursive;
     font-size: 6.5rem;
@@ -200,6 +230,7 @@ body {
     line-height: 1;
 }
 
+/* Subtítulo de la marca */
 .titulo-principal h3 {
     font-family: 'Merienda', cursive;
     font-size: 3.1rem;
@@ -208,6 +239,7 @@ body {
     line-height: 1.15;
 }
 
+/* Frase corta que acompaña a la marca */
 .eslogan {
     font-family: 'Hortensia', 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
@@ -218,6 +250,7 @@ body {
     text-align: center;
 }
 
+/* Contenedor de la imagen con marco decorativo */
 .marco-foto {
     position: relative;
     width: 265px;
@@ -239,6 +272,7 @@ body {
     z-index: 1;
 }
 
+/* Imagen que cubre todo su contenedor sin deformarse */
 .marco-foto img {
     position: relative;
     width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
@@ -256,6 +290,7 @@ body {
     padding: 0 40px;
 }
 
+/* Títulos principales de cada sección */
 .contenido h2 {
     font-family: 'Merienda', cursive;
     font-size: 2rem;
@@ -263,11 +298,13 @@ body {
     color: var(--hcolor-content);
 }
 
+/* Párrafos de texto */
 .contenido p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
+/* Subtítulos dentro de cada sección */
 .contenido h4 {
     font-family: 'Merienda', cursive;
     font-size: 1.35rem;
@@ -294,6 +331,7 @@ body {
     gap: 18px;
 }
 
+/* Imagen (logotipo) de la tarjeta de contacto */
 .avatar {
     width: 300px;
     height: 200px;
@@ -308,11 +346,13 @@ body {
     border-top: 1px solid rgba(54, 69, 50, 0.15);
 }
 
+/* Quita el margen superior del título dentro de cada bloque */
 .contacto-bloque h4 {
     margin-top: 0;
     margin-bottom: 6px;
 }
 
+/* Separación entre las líneas de información */
 .contacto-bloque p {
     margin-bottom: 4px;
 }
@@ -326,6 +366,7 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Tarjeta individual: contenedor en columna con bordes redondeados */
 .tarjeta-planta {
     background: #ffffff;
     border-radius: 14px;
@@ -336,18 +377,21 @@ body {
     /*transition: transform 0.2s ease;*/
 }
 
+/* Espacio de altura fija para la imagen; también sirve de referencia para ubicar el precio */
 .tarjeta-img-contenedor {
     position: relative;
     height: 200px;
     background-color: #f4f4f4;
 }
 
+/* La imagen llena todo el espacio recortándose sin deformarse */
 .tarjeta-img-contenedor img {
     width: 100%; /*Establece que el área del contenido debe ocupar el 100% del ancho del bloque contenedor*/
     height: 100%;
     object-fit: cover;
 }
 
+/* Etiqueta de precio superpuesta en la esquina de la imagen */
 .tarjeta-costo {
     position: absolute;
     bottom: 10px;
@@ -360,6 +404,7 @@ body {
     background-color: #00000076; /*Da un fondo negro difuminado para los números */
 }
 
+/* Zona de texto de la tarjeta; crece para alinear la sección de colores al fondo */
 .tarjeta-cuerpo {
     padding: 16px;
     display: flex;
@@ -367,18 +412,21 @@ body {
     flex-grow: 1;
 }
 
+/* Nombre común del elemento */
 .tarjeta-titulo {
     margin: 0 0 4px 0;
     font-size: 1.25rem;
     color: #1f2937;
 }
 
+/* Nombre científico, en letra más pequeña y gris */
 .tarjeta-cientifico {
     margin: 0 0 12px 0;
     font-size: 0.85rem;
     color: #6b7280;
 }
 
+/* Líneas de cuidados (riego, sol, etc.) */
 .tarjeta-cuidados p {
     margin: 6px 0;
     font-size: 0.9rem;
@@ -394,6 +442,7 @@ body {
     font-size: 0.9rem;
 }
 
+/* Distribución horizontal para un solo color o para el encabezado de la lista de colores */
 .color-unico, .sublista-colores summary {
     display: flex;
     align-items: center;
@@ -401,6 +450,7 @@ body {
     gap: 8px;
 }
 
+/* Encabezado desplegable de la lista de colores */
 .sublista-colores summary {
     cursor: pointer;
     list-style: none;
@@ -408,11 +458,13 @@ body {
     color: #374151;
 }
 
+/* Fila de pequeñas muestras de color */
 .grupo-muestras {
     display: flex;
     gap: 5px;
 }
 
+/* Círculo que muestra un color */
 .muestra-hex {
     width: 18px;
     height: 18px;
@@ -421,6 +473,7 @@ body {
     display: inline-block;
 }
 
+/* Lista desplegable con el nombre de cada color */
 .lista-tonos {
     list-style: none;
     padding: 8px 0 0 0;
@@ -431,6 +484,7 @@ body {
     gap: 8px;
 }
 
+/* Cada color dentro de la lista */
 .lista-tonos li {
     display: flex;
     align-items: center;
@@ -441,6 +495,7 @@ body {
     font-size: 0.8rem;
 }
 
+/* Versión pequeña del círculo de color, usada dentro de la lista */
 .muestra-hex-mini {
     width: 12px;
     height: 12px;
@@ -457,7 +512,12 @@ body {
     margin: 20px auto;
     border: none;
     border-radius: 10px;
+    height: auto; /* La altura se calcula con aspect-ratio en lugar del atributo height del HTML */
 }
+
+/* Proporción de cada tipo de contenido incrustado */
+.yt { aspect-ratio: 16 / 9; } /* Video */
+.maps { aspect-ratio: 4 / 3; } /* Mapa */
 
 /* SELECTOR DE COLOR */
 .selector-color {
